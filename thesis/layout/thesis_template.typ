@@ -6,6 +6,7 @@
 #import "../layout/abstract.typ": *
 #import "../utils/print_page_break.typ": *
 #import "../layout/fonts.typ": *
+#import "../layout/cover.typ": *
 
 #let thesis(
   title: "",
@@ -103,8 +104,6 @@
 
   // --- Citations ---
   set cite(style: "alphanumeric")
-  show bibliography: set text(font: fonts.body)
-  set bibliography(style: "alphanumeric", title: "References")
 
   // --- Figures ---
   show figure: set text(size: 0.85em)
