@@ -1,5 +1,5 @@
-#import "/utils/formfield.typ": *
-#import "/layout/fonts.typ": *
+#import "../utils/formfield.typ": *
+#import "../layout/fonts.typ": *
 
 #let registrationCertificate(
   author: "",
@@ -31,7 +31,7 @@
     stack(
       dir: ttb,
       spacing: 10pt,
-      image("/figures/tum_logo.png", width: 20%),
+      image("../figures/tum_logo.png", width: 20%),
       text(font: fonts.sans, weight: "bold", "Technical University \n of Munich")
     )
   )

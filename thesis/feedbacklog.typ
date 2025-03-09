@@ -1,6 +1,6 @@
-#import "/layout/feedbacklog_template.typ": *
-#import "/metadata.typ": *
-#import "/utils/feedback.typ": *
+#import "./layout/feedbacklog_template.typ": *
+#import "./metadata.typ": *
+#import "./utils/feedback.typ": *
 
 #set document(title: titleEnglish, author: author)
 

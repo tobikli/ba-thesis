@@ -1,11 +1,11 @@
-#import "/layout/cover.typ": *
-#import "/layout/titlepage.typ": *
-#import "/layout/disclaimer.typ": *
-#import "/layout/acknowledgement.typ": acknowledgement as acknowledgement_layout
-#import "/layout/transparency_ai_tools.typ": transparency_ai_tools as transparency_ai_tools_layout
-#import "/layout/abstract.typ": *
-#import "/utils/print_page_break.typ": *
-#import "/layout/fonts.typ": *
+#import "../content/abstract_de.typ": *
+#import "../layout/titlepage.typ": *
+#import "../layout/disclaimer.typ": *
+#import "../layout/acknowledgement.typ": acknowledgement as acknowledgement_layout
+#import "../layout/transparency_ai_tools.typ": transparency_ai_tools as transparency_ai_tools_layout
+#import "../layout/abstract.typ": *
+#import "../utils/print_page_break.typ": *
+#import "../layout/fonts.typ": *
 
 #let thesis(
   title: "",
@@ -103,6 +103,8 @@
 
   // --- Citations ---
   set cite(style: "alphanumeric")
+  show bibliography: set text(font: fonts.body)
+  set bibliography(style: "alphanumeric", title: "References")
 
   // --- Figures ---
   show figure: set text(size: 0.85em)
@@ -151,8 +153,8 @@
   // Appendix.
   pagebreak()
   heading(numbering: none)[Appendix A: Supplementary Material]
-  include("/layout/appendix.typ")
+  include("../layout/appendix.typ")
 
   pagebreak()
-  bibliography("/thesis.bib")
+  bibliography("../thesis.bib")
 }

@@ -1,4 +1,4 @@
-#import "/layout/fonts.typ": *
+#import "../layout/fonts.typ": *
 
 #let cover(
   title: "",

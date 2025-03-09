@@ -1,4 +1,4 @@
-#import "/layout/fonts.typ": *
+#import "../layout/fonts.typ": *
 
 #let titlepage(
   title: "",
@@ -31,7 +31,7 @@
   
   // --- Title Page ---
   v(1cm)
-  align(center, image("/figures/tum_logo.png", width: 26%))
+  align(center, image("../figures/tum_logo.png", width: 26%))
 
   v(5mm)
   align(center, text(font: fonts.sans, 2em, weight: 700, "Technical University of Munich"))

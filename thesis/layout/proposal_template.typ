@@ -1,7 +1,7 @@
-#import "/layout/titlepage.typ": *
-#import "/layout/transparency_ai_tools.typ": transparency_ai_tools as transparency_ai_tools_layout
-#import "/utils/print_page_break.typ": *
-#import "/layout/fonts.typ": *
+#import "../layout/titlepage.typ": *
+#import "../layout/transparency_ai_tools.typ": transparency_ai_tools as transparency_ai_tools_layout
+#import "../utils/print_page_break.typ": *
+#import "../layout/fonts.typ": *
 
 // The project function defines how your document looks.
 // It takes your content and some metadata and formats it.
@@ -72,7 +72,7 @@
   body
 
   pagebreak()
-  bibliography("/thesis.bib")
+  bibliography("../thesis.bib")
   pagebreak()
   transparency_ai_tools_layout(transparency_ai_tools)
 }
