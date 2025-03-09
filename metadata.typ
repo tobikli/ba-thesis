@@ -1,6 +1,6 @@
 // Enter your thesis data here:
-#let titleEnglish = "Load Testing and Performance Evaluation of the Theia online IDE"
-#let titleGerman = "(Title German)"
+#let titleEnglish = "Load Testing and Performance Evaluation of the Theia Online IDE"
+#let titleGerman = "Belastungstests und Leistungsbewertung der Theia Online IDE"
 #let degree = "Bachelor"
 #let program = "Informatics"
 #let supervisor = "Prof. Dr. Stephan Krusche"
