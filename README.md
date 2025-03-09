@@ -1,8 +1,8 @@
 # Bachelor Thesis
 
-This repository provides everything for my Bachelor Thesis in 2025 about Load Testing and Performance Evaluation of the Theia Online IDE. It was written at the Research Group [Applied Education Technologies](https://aet.cit.tum.de/) of the [Technical University of Munich](https://tum.de) under Guidance of [@Matthias Linhuber](https://github.com/mtze).
+This repository provides everything for my Bachelor Thesis in 2025 about **Load Testing and Performance Evaluation of the Theia Online IDE**. It was written at the Research Group [Applied Education Technologies](https://aet.cit.tum.de/) of the [Technical University of Munich](https://tum.de) under guidance of [@Matthias Linhuber](https://github.com/mtze).
 
-**Note:** The Thesis is based on the template of the Research Group which can be found [here](https://github.com/ls1intum/thesis-template-typst).
+**Note:** This thesis is based on the typst template for thesises of the AET Research Group, which can be found [here](https://github.com/ls1intum/thesis-template-typst).
 
 ## About the Thesis
 
