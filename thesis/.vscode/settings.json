@@ -1,0 +1,5 @@
+{
+    "typst-lsp.experimentalFeatures": true,
+    "typst-lsp.rootPath": ".",
+    "typst-lsp.exportPdf": "onSave"
+} 
