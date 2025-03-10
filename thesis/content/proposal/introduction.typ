@@ -2,10 +2,9 @@
 
 
 = Introduction
-#TODO[ // Remove this block
-  *Introduction*
-  - Introduce the reader to the general setting (No Problem description yet)
-  - What is the environment?
-  - What are the tools in use?
-  - (Not more than 1/2 a page)
-]
+
+Modern software development increasingly relies on cloud-based Integrated Development Environments (IDEs) to provide accessible, scalable, and collaborative coding environments @wu:2011:CEclipseOnlineIDE. One such platform is Theia Cloud #footnote("https://www.theia-ide.org/"), a fully browser-based IDE designed for flexibility and extensibility. Unlike traditional desktop IDEs, Theia Cloud eliminates the need for local installations, enabling seamless access to development tools from any device. This makes it particularly well-suited for educational institutions, where students and instructors require a consistent and scalable development environment.
+
+At the Technical University of Munich (TUM), Theia Cloud is integrated into Artemis, a learning management system that supports programming, modeling, and quiz-based exercises with (semi-)automatic assessment. Artemis enables students to complete coding assignments directly within the browser, while instructors can evaluate submissions efficiently. In the Winter Semester 24/25, over 14.000 #footnote("TUM in Zahlen, 10.03.2025") students were enrolled in the School of Computation, many of whom regularly used Artemis for their courses. Ensuring the usability and performance of Theia Cloud within Artemis is crucial, especially during high-demand periods such as programming exams, where many students access the system simultaneously.
+
+Theia Cloud currently integrates with Artemis via a custom extension for Theia Cloud and uniquely created Theia instances for each Artemis user @jandow:2024:ScorpioVisualStudio. This extension allows students to open Artemis assignments in Theia Cloud and submit their solutions directly within the IDE. However, this integration is not without its challenges.
