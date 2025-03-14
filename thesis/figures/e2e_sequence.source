@@ -1,0 +1,32 @@
+https://sequencediagram.org/
+
+title Automated Load Testing on Theia Cloud
+
+participant "Simulated User" as User
+participant "Theia Cloud" as Theia
+participant "Artemis Services" as Backend
+participant "Artemis Git" as VCS
+
+User -> Theia: Open IDE in browser
+Theia -> Backend: Initialize session
+Backend -> Theia: Session ready
+Theia -> User: Display IDE
+
+loop 
+User -> Theia: Edit code
+Theia -> Backend: Save changes
+Backend -> Theia: Acknowledge save
+
+User -> Theia: Run code execution
+Theia -> Backend: Process execution request
+Backend -> Theia: Return output
+Theia -> User: Display execution result
+end 
+
+User -> Theia: Commit changes
+Theia -> VCS: Create new commit
+VCS -> Theia: Commit successful
+
+User -> Theia: Push to remote repository
+Theia -> VCS: Push changes
+VCS -> Theia: Push successful

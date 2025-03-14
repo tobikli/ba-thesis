@@ -14,12 +14,12 @@ The E2E test suite will be designed to be maintainable and scalable, allowing fu
 
 #figure(
   image("../../figures/e2e_sequence.svg", width: 80%),
-  caption: [Activity Diagram of an example E2E Test],
+  caption: [Sequence Diagram of an example E2E Test],
 ) <fig1>
 
 == Implement a scalable load testing framework to evaluate system performance under high concurrent usage
 
-In educational settings, Theia Cloud must support hundreds of students working simultaneously, especially during programming exams. However, its ability to handle high user loads has not been systematically tested. This thesis will develop a load testing framework that can simulate realistic student interactions at scale.
+In educational settings, Theia Cloud must support hundreds of students working simultaneously, especially during programming exams @turdiu:2020:OnlineExamsArtemis. However, its ability to handle high user loads has not been systematically tested. This thesis will develop a load testing framework that can simulate realistic student interactions at scale.
 
 The framework will model typical user workflows, including editing code, executing programs, and interacting with the terminal, to replicate real-world usage patterns. The tests will assess latency, response times, and resource consumption under increasing user loads. The system’s breaking point, where performance degrades or failures occur, will be identified to provide insights for potential optimizations. The focus will be on developing a scalable and repeatable methodology that can be used for ongoing performance evaluations.
 

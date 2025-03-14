@@ -1,12 +1,23 @@
 #import "../../utils/todo.typ": TODO
 
 = Schedule
-#TODO[ // Remove this block
-  *Thesis Schedule*
-  - When will the thesis Start
-  - Create a rough plan for your thesis (separate the time in iterations with a length of 2-4 weeks)
-  - Each iteration should contain several smaller work items - Again keep it high-level and make to keep your plan realistic
-  - Make sure the work-items are measurable and deliverable, they should describe features that are vertically integrated
-  - Do not include thesis writing or presentation tasks
-]
 The following milestones will guide the implementation process to achieve theoutlined objectives. The Bachelor’s thesis starts on _TODO_ and will becompleted on _TODO_. To ensure a structured and timely completion of the project, the following schedule is planned:
+
+1. Iteration (Week 1): Setup Development Environment and Exploration
+- 
+
+2. Iteration (Weeks 2-5): Implement End-to-End (E2E) UI Testing with Playwright
+-
+
+3. Iteration (Weeks 6-7): Expand Test Coverage & Optimize Test Execution
+-
+
+4. Iteration (Weeks 8-10): Develop Scalable Load Testing Framework
+-
+
+5. Iteration (Weeks 11-13): Performance Analysis & Bottleneck Identification
+-
+
+6. Iteration (Weeks 14-16): Final Evaluation & Refinements
+-
+
