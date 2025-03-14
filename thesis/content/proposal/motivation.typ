@@ -2,11 +2,10 @@
 
 
 = Motivation
-#TODO[ // Remove this block
-  *Proposal Motivation*
-  - Outline why it is (scientifically) important to solve the problem
-  - Again use the actors to present your solution, but don't be to specific
-  - Do not repeat the problem, instead focus on the positive aspects when the solution to the problem is available
-  - Be visionary! 
-  - Optional: motivate with existing research, previous work 
-]
+Ensuring the reliability and scalability of cloud-based IDEs like Theia Cloud is essential for modern education, where interactive coding environments play a critical role in learning @zander:2024:DevelopingImprovedCode. As online programming platforms become more widely adopted, the ability to guarantee a smooth, uninterrupted experience for students and instructors is crucial. A well-tested and scalable Theia Cloud within Artemis has the potential to transform programming education, making it more efficient, accessible, and resilient even under high workloads.
+
+For students, a robust and responsive IDE means seamless learning experiences without technical disruptions. When programming exams and assignments run smoothly, students can focus on solving problems rather than dealing with system failures @turdiu:2020:OnlineExamsArtemis. Automated testing and performance evaluation ensure that code editing, execution, and version control work as expected across different scenarios, reducing frustration and improving overall engagement. Research on online learning environments highlights that system stability directly influences student satisfaction and learning outcomes @muller:2021:FacilitatingFlexibleLearning.
+
+For instructors, a scalable and well-tested Theia Cloud reduces the burden of technical interruptions during teaching and assessment. A reliable IDE allows them to design complex, interactive programming exercises without concerns about system failures. Furthermore, ensuring the correctness of interactive features through automated End-to-End (E2E) testing enables instructors to trust that students have a consistent, functional development environment.
+
+From a scientific perspective, the need for effective automated testing in cloud-based IDEs is an evolving research area. Existing studies emphasize the challenges of testing complex, interactive web applications @paul:2001:EndtoendIntegrationTesting. By developing a systematic approach to testing Theia Cloud, this thesis contributes to the broader field of automated software testing, performance engineering, and cloud-based development environments. A scalable, well-tested Theia Cloud sets a precedent for future educational IDEs, ensuring that large-scale programming education remains efficient, stable, and accessible.
