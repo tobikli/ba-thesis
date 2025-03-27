@@ -13,7 +13,7 @@ To ensure the correctness and stability of Theia Cloud’s interactive features,
 The E2E test suite will be designed to be maintainable and scalable, allowing future extensions as new features are introduced. Special attention will be given to handling asynchronous behavior, such as delayed UI updates and dynamic content loading, which are common in web-based IDEs. The implementation will include test automation best practices, such as using selectors resilient to UI changes and structuring tests modularly for reusability.
 
 #figure(
-  image("../../figures/e2e_sequence.svg", width: 80%),
+  image("../../figures/proposal_diagram.svg", width: 80%),
   caption: [Sequence Diagram of an example E2E Test],
 ) <fig1>
 

@@ -1,0 +1,31 @@
+title Automated Load Testing on Theia Cloud
+
+participant "Simulated User" as User
+participant "Theia" as Theia
+participant "Artemis Services" as Artemis
+participant "Artemis Git" as Git
+
+User -> Artemis: Start Excercise
+Artemis -> Theia: Initialize session
+Theia -> User: Display IDE
+
+User -> Theia: Clone Repository
+Theia -> Git: Clone Repository
+Git -> Theia: Clone successful
+Theia -> User: Display Code
+
+loop 
+User -> Theia: Edit code
+Theia -> Theia: Save changes
+
+User -> Theia: Run code execution
+Theia -> Theia: Process execution request
+Theia -> User: Display execution result
+end 
+
+User -> Theia: Commit changes
+User -> Theia: Push changes
+
+Theia -> Git: Push to remote repository
+Git -> Artemis: Run tests
+Artemis -> Theia: Display results
