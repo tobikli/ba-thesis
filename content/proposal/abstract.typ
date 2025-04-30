@@ -1,5 +1,3 @@
-#import "../../utils/todo.typ": TODO
-
 = Abstract
 
 Theia Cloud is a fully browser-based Integrated Development Environment (IDE) that enables users to write, execute, and manage code without local installations. As Theia Cloud becomes increasingly integrated into educational platforms like Artemis, ensuring its reliability, usability, and scalability is crucial, particularly in large-scale environments with high concurrent usage.

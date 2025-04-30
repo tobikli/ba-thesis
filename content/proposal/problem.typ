@@ -1,4 +1,4 @@
-#import "../../utils/todo.typ": TODO
+#import "/utils/todo.typ": TODO
 
 = Problem
 Theia Cloud plays a crucial role in enabling students to write and execute code directly within the browser as part of their coursework in Artemis. However, ensuring a smooth and responsive experience for all users remains a challenge, particularly as the number of students relying on the platform increases @tiz. Despite its capabilities, Theia Cloud lacks comprehensive automated testing and performance evaluation, leading to potential usability and scalability issues.

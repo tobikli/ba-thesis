@@ -1,4 +1,4 @@
-#import "../../utils/todo.typ": TODO
+#import "/utils/todo.typ": TODO
 
 = Schedule
 The following milestones will guide the implementation process to achieve the outlined objectives. The Bachelor’s thesis starts on _TODO_ and will be completed on _TODO_. To ensure a structured and timely completion of the project, the following schedule is planned:

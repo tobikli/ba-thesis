@@ -15,6 +15,6 @@ jobs:
           lfs: true
 
       - uses: typst-community/setup-typst@v3
-      - run: typst compile thesis/thesis.typ thesis.pdf
-      - run: typst compile thesis/proposal.typ proposal.pdf
-      - run: typst compile thesis/registration_certificate.typ registration_certificate.pdf
+      - run: typst compile thesis.typ thesis.pdf
+      - run: typst compile proposal.typ proposal.pdf
+      - run: typst compile registration_certificate.typ registration_certificate.pdf

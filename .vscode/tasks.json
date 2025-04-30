@@ -5,7 +5,7 @@
         "label": "Watch Typst Proposal",
         "type": "shell",
         "command": "typst",
-        "args": ["watch", "thesis/proposal.typ"],
+        "args": ["watch", "proposal.typ"],
         "problemMatcher": [],
         "runOptions": {
           "runOn": "folderOpen"
@@ -16,7 +16,7 @@
         "label": "Watch Typst Thesis",
         "type": "shell",
         "command": "typst",
-        "args": ["watch", "thesis/thesis.typ"],
+        "args": ["watch", "thesis.typ"],
         "problemMatcher": [],
         "runOptions": {
           "runOn": "folderOpen"
