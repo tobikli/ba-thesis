@@ -9,4 +9,4 @@ In addition to functional issues, Theia Cloud’s performance under load remains
 
 Furthermore, there is limited visibility into performance bottlenecks, making it difficult for system administrators to proactively address issues. While monitoring tools like Grafana #footnote("https://grafana.gchq.ase.in.tum.de/") provide insights into system metrics, without structured load testing, it is challenging to determine at what point the system fails to scale or which components are most susceptible to performance degradation.
 
-The lack of structured automated testing and scalability assessment poses a risk to the reliability, usability, and stability of Theia Cloud within Artemis. Without addressing these gaps, students may experience frustration due to unexpected failures, instructors may face increased workload due to system issues, and system administrators may struggle to diagnose and resolve performance-related problems in a timely manner.
+The lack of structured automated testing and scalability assessment poses a risk to the reliability, usability, and stability of Theia Cloud within Artemis. 

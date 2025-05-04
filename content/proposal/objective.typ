@@ -1,5 +1,6 @@
 #import "../../utils/todo.typ": TODO
 
+
 = Objective
 The goal of this thesis is to ensure the reliability, usability, and scalability of Theia Cloud within Artemis by developing a structured automated testing framework. This involves both End-to-End (E2E) UI testing and scalability testing, enabling the identification of performance bottlenecks under real-world conditions @paul:2001:EndtoendIntegrationTesting. The key objectives of this thesis are:
 	1.	Develop an automated End-to-End (E2E) testing suite using Playwright
@@ -12,6 +13,8 @@ To ensure the correctness and stability of Theia Cloud’s interactive features,
 
 The E2E test suite will be designed to be maintainable and scalable, allowing future extensions as new features are introduced. Special attention will be given to handling asynchronous behavior, such as delayed UI updates and dynamic content loading, which are common in web-based IDEs. The implementation will include test automation best practices, such as using selectors resilient to UI changes and structuring tests modularly for reusability.
 
+Tests regarding interaction with Artemis will be integrated into the existing CI/CD pipeline of Artemis, ensuring that any changes to Theia Cloud are automatically validated against the test suite. This integration will help maintain a high level of confidence in the system’s correctness and stability, reducing the risk of regressions and improving overall user experience.
+
 #figure(
   image("/figures/proposal_diagram.svg", width: 80%),
   caption: [Sequence Diagram of an example E2E Test],
@@ -19,9 +22,17 @@ The E2E test suite will be designed to be maintainable and scalable, allowing fu
 
 == Implement a scalable load testing framework to evaluate system performance under high concurrent usage
 
-In educational settings, Theia Cloud must support hundreds of students working simultaneously, especially during programming exams @turdiu:2020:OnlineExamsArtemis. However, its ability to handle high user loads has not been systematically tested. This thesis will develop a load testing framework that can simulate realistic student interactions at scale.
+In educational settings, Theia Cloud must support hundreds of students working simultaneously, especially during programming exams @turdiu:2020:OnlineExamsArtemis. However, its ability to handle high user loads has not been systematically tested. This thesis will develop a load testing framework, as seen in @fig2, that can simulate realistic student interactions at scale.
 
 The framework will model typical user workflows, including editing code, executing programs, and interacting with the terminal, to replicate real-world usage patterns. The tests will assess latency, response times, and resource consumption under increasing user loads. The system’s breaking point, where performance degrades or failures occur, will be identified to provide insights for potential optimizations. The focus will be on developing a scalable and repeatable methodology that can be used for ongoing performance evaluations.
+
+To ensure the that scaled tests do not interfere with the CI/CD development process, a seperate testing environment will be set up. This environment will be isolated from the production system, allowing for extensive load testing without impacting real users or pipeline building.
+
+#figure(
+  image("/figures/component_diagram.svg", width: 80%),
+  caption: [Component Diagram of the scalable load testing framework],
+) <fig2>
+
 
 == Analyze system performance and identify bottlenecks using monitoring tools
 

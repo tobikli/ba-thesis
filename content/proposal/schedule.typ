@@ -1,38 +1,35 @@
 #import "/utils/todo.typ": TODO
 
 = Schedule
-The following milestones will guide the implementation process to achieve the outlined objectives. The Bachelor’s thesis starts on _TODO_ and will be completed on _TODO_. To ensure a structured and timely completion of the project, the following schedule is planned:
 
-1. #strong[Iteration (Week 1): Setup Development Environment and Exploration]
-   - Setup Playwright Environment
-   - Define key user workflows for testing (e.g., code editing, execution, version control)
-   - Select test scenarios based on real-world student interactions
+The following key milestones structure the implementation timeline of this thesis. Each milestone represents a concrete capability or achievement necessary to reach the final goal of a scalable, reliable testing solution for Theia Cloud within Artemis.
 
-2. #strong[Iteration (Weeks 2-4): Implement End-to-End (E2E) UI Testing with Playwright (Objective 4.1)]
-   - Implement first E2E tests
-   - Simulate user that starts an instance and clones the repository
-   - Run initial test executions and validate results
+- #strong[Milestone 1 (by 31.05.2025): Functional Integration Tests within Artemis]
+   - Automated tests can launch Theia Cloud via the "Open Online IDE" button in Artemis
+   - Tests simulate realistic user interactions:
+     - Accessing courses and programming exercises
+     - Opening the IDE, cloning repositories
+     - Modifying code and submitting solutions
+   - Test validations include confirmation of feedback and grading via Artemis UI or API
+   - Ensures system correctness from a user's point of view
 
-3. #strong[Iteration (Weeks 5-6): Expand Test Coverage & Optimize Test Execution (Objective 4.1 and 4.2)]
-   - Implement tests with broader coverage
-   - Tests including version control, coding, building, debugging, file management, terminal interaction, and submitting
-   - Integrate Playwright Tests into CI/CD Pipeline
+- #strong[Milestone 2 (by 30.06.2025): Scalable Load Testing Framework Operational]
+   - Realistic user behavior is modeled and simulated across multiple concurrent users
+   - Test scenarios include:
+     - Code editing, terminal usage, file navigation, submissions, version control
+   - Load tests can simulate full-course usage (e.g., 100+ concurrent users)
+   - System metrics such as CPU, memory, response times, and error rates are collected and visualized (e.g., via Grafana)
 
-4. #strong[Iteration (Weeks 7-9): Develop Scalable Load Testing Framework (Objective 4.2)]
-   - Model realistic concurrent user behavior
-   - Run initial load tests and identify system limits
-   - Run tests in a realistic course size
+- #strong[Milestone 3 (by 31.07.2025): AI-Enhanced Test Variants and Randomization]
+   - Integration of AI-generated user personas (e.g., via LLMs) to vary coding styles and behaviors
+   - Randomized execution paths simulate more diverse student interactions
+   - A configurable engine generates test users with variable expertise, input behavior, and task execution patterns
+   - Ensures broader test coverage and stress on edge cases
 
-5. #strong[Iteration (Weeks 10-11): Implement Usage of Randomization and LLMs (Objective 4.1)]
-   - Include randomized simulated user interaction and coding
-   - Use LLMs to generate even more realistic and wider user interaction
+- #strong[Milestone 4 (by 31.08.2025): Performance Evaluation and Final Validation]
+   - Comprehensive analysis of test results and system metrics under peak and nominal load
+   - Identification of bottlenecks and regressions
+   - Final report includes system strengths, weaknesses, and recommendations
+   - All code and documentation finalized and prepared for submission
 
-6. #strong[Iteration (Weeks 12-13): Performance Analysis & Bottleneck Identification (Objective 4.3)]
-   - Identify bottlenecks and potential areas for optimization
-   - Run tests under different system configurations
-   - Analyze system metrics (CPU, memory, response times, request throughput)
-
-7. #strong[Iteration (Week 14): Final Evaluation & Refinements]
-   - Review the system and check for bugs and errors
-   - Validate improvements by running final test cycles
-   - Prepare final test reports and documentation
+The Bachelor’s thesis starts on _TODO_ and will be completed on _TODO_. Each milestone builds upon the previous, ensuring a structured and outcome-driven development process.

@@ -1,5 +1,4 @@
 {
-    "typst-lsp.experimentalFeatures": true,
-    "typst-lsp.exportPdf": "onSave",
     "tinymist.rootPath": "/Users/tobias/Desktop/TUM/Bachelor/Sem_6/BA/BA Repo"
+    
 } 

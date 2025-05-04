@@ -1,6 +1,5 @@
 #import "/utils/todo.typ": TODO
 
-
 = Motivation
 Ensuring the reliability and scalability of cloud-based IDEs like Theia Cloud is essential for modern education, where interactive coding environments play a critical role in learning @zander:2024:DevelopingImprovedCode. As online programming platforms become more widely adopted, the ability to guarantee a smooth, uninterrupted experience for students and instructors is crucial. A well-tested and scalable Theia Cloud within Artemis has the potential to transform programming education, making it more efficient, accessible, and resilient even under high workloads.
 
