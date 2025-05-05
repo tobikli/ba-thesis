@@ -1,9 +1,9 @@
-title Automated Load Testing on Theia Cloud
+title Integration Test Theia Cloud
 
-participant "Simulated User" as User
-participant "Theia" as Theia
-participant "Artemis Services" as Artemis
-participant "Artemis Git" as Git
+participant "Playwright Test Suite" as User
+participant "Theia Client" as Theia
+participant "Artemis Server" as Artemis
+participant "Artemis Version Control" as Git
 
 User -> Artemis: Start Excercise
 Artemis -> Theia: Initialize session
