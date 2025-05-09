@@ -7,7 +7,7 @@
 #let advisors = ("Matthias Linhuber, M.Sc.",)
 #let author = "Tobias Wen Klingenberg"
 #let birthdate = datetime(day: 26, month: 05, year: 2003) // only necessary for registration certificate
-#let startDate = datetime(day: 01, month: 05, year: 2025)
+#let startDate = datetime(day: 15, month: 05, year: 2025)
 #let submissionDate = datetime(day: 01, month: 09, year: 2025)
 #let presentationDate = datetime(day: 31, month: 12, year: 2025)
 #let feedbacklogSubmissionDate = datetime(day: 1, month: 1, year: 2025)
