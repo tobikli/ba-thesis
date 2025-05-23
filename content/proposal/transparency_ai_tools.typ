@@ -1,7 +1,7 @@
 #import "/utils/todo.typ": TODO
 
 In preparing this proposal, I utilized Grammarly for grammar and style correction across all sections, ensuring clarity and coherence in my writing. 
-Furthermore, I used ChatGPT to generate initial drafts of the structure and expand on ideas. I have critically reviewed all text created with these tools to ensure they are correct and fit the context of the proposal.
+Furthermore, I used ChatGPT to generate initial drafts of the structure and expand on ideas. I have critically reviewed all text created with these tools to ensure they are correct and fit the proposal context.
 /*
 Categories of AI Usage:
   Grammar and Style Correction
