@@ -1,6 +1,5 @@
 #import "../../utils/todo.typ": TODO
 
-
 = Objective
 This thesis aims to ensure the reliability, usability, and scalability of Theia Cloud within Artemis by developing a structured, automated testing framework. This involves both E2E UI testing and scalability testing, enabling the identification of performance bottlenecks under real-world conditions @paul:2001:EndtoendIntegrationTesting. The key objectives of this thesis are:
 1.	Develop an automated Theia E2E testing
@@ -12,12 +11,12 @@ This thesis aims to ensure the reliability, usability, and scalability of Theia 
 
 To ensure the correctness and stability of Theia Cloud's interactive features, this thesis develops an automated E2E test suite using Playwright #footnote("https://playwright.dev/")<pwr>. The tests cover essential functionalities, including code editing, file management, terminal interactions, and version control integration, as shown in @fig1. Since developers actively enhance Theia Cloud, automated tests help detect regressions and UI inconsistencies early in development.
 
-This thesis designs the E2E test suite to be maintainable and scalable, enabling future extensions as developers introduce new features. It pays special attention to handling asynchronous behavior, such as delayed UI updates and dynamic content loading, challenges commonly encountered in web-based IDEs. The implementation includes test automation best practices, such as using selectors resilient to UI changes and structuring tests modularly for reusability.
+This thesis designs the test suite to be maintainable and scalable, enabling future extensions as developers introduce new features. It pays special attention to handling asynchronous behavior, such as delayed UI updates and dynamic content loading, challenges commonly encountered in web-based IDEs. The implementation includes test automation best practices, such as using selectors resilient to UI changes and structuring tests modularly for reusability.
 
 The suite integrates tests for interactions with Artemis directly into Artemis' existing CI/CD pipeline, automatically validating any changes to Theia Cloud against the test suite. This integration helps maintain a high level of confidence in the system's correctness and stability, reducing the risk of regressions and improving overall user experience.
 
 #figure(
-  image("/figures/proposal/sequence_diagram_1.svg", width: 100%),
+  image("/figures/proposal/sequence_diagram_1.svg", height: 85%),
   caption: [Sequence diagram of a complete End-to-End test scenario for Theia Cloud integrated with Artemis],
 ) <fig1>
 
@@ -30,7 +29,7 @@ The framework models typical user workflows such as editing code, executing prog
 This thesis sets up a separate testing environment to ensure that scaled tests do not interfere with the CI/CD development process. This environment is isolated from the production system, allowing for extensive load testing without impacting real users or pipeline building.
 
 #figure(
-  image("/figures/proposal/Component_Diagram.svg", width: 100%),
+  image("/figures/proposal/Component_Diagram_PDF.svg", width: 105%),
   caption: [Component Diagram of the scalable load testing framework using 2 instances of Theia Cloud],
 ) <fig2>
 
