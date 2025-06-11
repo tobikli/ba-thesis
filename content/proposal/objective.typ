@@ -29,7 +29,7 @@ The framework models typical user workflows such as editing code, executing prog
 This thesis sets up a separate testing environment to ensure that scaled tests do not interfere with the CI/CD development process. This environment is isolated from the production system, allowing for extensive load testing without impacting real users or pipeline building.
 
 #figure(
-  image("/figures/proposal/Component_Diagram_PDF.svg", width: 105%),
+  image("/figures/proposal/Component_Diagram.svg", width: 105%),
   caption: [Component Diagram of the scalable load testing framework using 2 instances of Theia Cloud],
 ) <fig2>
 
