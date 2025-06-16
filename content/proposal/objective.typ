@@ -16,21 +16,23 @@ This thesis designs the test suite to be maintainable and scalable, enabling fut
 The suite integrates tests for interactions with Artemis directly into Artemis' existing CI/CD pipeline, automatically validating any changes to Theia Cloud against the test suite. This integration helps maintain a high level of confidence in the system's correctness and stability, reducing the risk of regressions and improving overall user experience.
 
 #figure(
-  image("/figures/proposal/sequence_diagram_1.svg", height: 85%),
+  image("/figures/proposal/sequence_diagram.svg", height: 85%),
   caption: [Sequence diagram of a complete End-to-End test scenario for Theia Cloud integrated with Artemis],
 ) <fig1>
+
+
 
 == Implement a Scalable Load Testing Framework
 
 In educational settings, Theia Cloud must support hundreds of students working simultaneously, especially during programming exams @turdiu:2020:OnlineExamsArtemis. However, developers have not yet systematically tested its ability to handle high user loads. This thesis develops a load testing framework, as seen in @fig2, that can simulate realistic student interactions at scale. For illustration, the diagram presents a simplified architecture of the load testing framework using only two instances of Theia Cloud. In reality, the framework scales up to even more instances of Theia Cloud, depending on the available resources.
 
-The framework models typical user workflows such as editing code, executing programs, and using the terminal to replicate real-world usage patterns. The tests measure latency, response times, and resource consumption under increasing load. They also identify the system’s breaking point, where performance degrades or failures occur, to support targeted optimizations. The goal is to develop a scalable and repeatable methodology for evaluating the performance of Theia Cloud over time.
+The framework models typical user workflows such as editing code, executing programs, and using the terminal to replicate real-world usage patterns. The tests measure latency, response times, and resource consumption under increasing load. They also identify the system's breaking point, where performance degrades or failures occur, to support targeted optimizations. The goal is to develop a scalable and repeatable methodology for evaluating the performance of Theia Cloud over time.
 
 This thesis sets up a separate testing environment to ensure that scaled tests do not interfere with the CI/CD development process. This environment is isolated from the production system, allowing for extensive load testing without impacting real users or pipeline building.
 
 #figure(
-  image("/figures/proposal/Component_Diagram.svg", width: 105%),
-  caption: [Component Diagram of the scalable load testing framework using 2 instances of Theia Cloud],
+  image("/figures/proposal/deployment_diagram.svg", width: 100%),
+  caption: [Deployment Diagram of the scalable load testing framework using 2 instances of Theia Cloud],
 ) <fig2>
 
 == Analyze System Performance and Identify Bottlenecks

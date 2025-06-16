@@ -8,26 +8,61 @@ participant "Artemis Server" as Artemis
 participant "Artemis Version Control" as Git
 
 User -> Artemis: Start Excercise
+activate Artemis
 Artemis -> Theia: Initialize session
+deactivate Artemis
+activate Theia
 Theia -> User: Display IDE
+deactivate Theia
+activate User
+
+# User<-#00ff00:2>Theia: Assert IDE Layout
+box right of User#limegreen: Assert IDE Layout
 
 User -> Theia: Clone Repository
+deactivate User
+activate Theia
 Theia -> Git: Clone Repository
+deactivate Theia
+activate Git
 Git -> Theia: Clone successful
+deactivate Git
+activate Theia
 Theia -> User: Display Code
-
+deactivate Theia
+activate User
 loop 
+
+#User<-#00ff00:2>Theia: Assert Editor content
+box right of User#limegreen: Assert Editor content
 User -> Theia: Edit code
-Theia -> Theia: Save changes
-
+activate Theia
+deactivate User
+Theia -> User: Save changes
+deactivate Theia
+activate User
+#User<-#00ff00:2>Theia: Assert Editor content
+box right of User#limegreen: Assert Editor content
 User -> Theia: Run code execution
-Theia -> Theia: Process execution request
+deactivate User
+activate Theia
 Theia -> User: Display execution result
+#User<-#00ff00:2>Theia: Assert expected execution result
+deactivate Theia
+activate User
 end 
+box right of User#limegreen: Assert expected execution result
 
-User -> Theia: Commit changes
-User -> Theia: Push changes
-
+User -> Theia: Commit and Push changes
+deactivate User
+activate Theia
 Theia -> Git: Push to remote repository
+deactivate Theia
+activate Git
 Git -> Artemis: Run tests
-Artemis -> Theia: Display results
+deactivate Git
+activate Artemis
+Artemis -> User: Display results
+deactivate Artemis
+#User<-#00ff00:2>Theia: Assert expected test result
+box right of User#limegreen: Assert expected test result
