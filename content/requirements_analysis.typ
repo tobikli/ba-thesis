@@ -1,10 +1,12 @@
 #import "/utils/todo.typ": TODO
+#import "/figures/tables.typ": *
 
 = Requirements Analysis
 #TODO[
   This chapter follows the Requirements Analysis Document Template in @bruegge:2004:ObjectorientedSoftwareEngineering. Important: Make sure that the whole chapter is independent of the chosen technology and development platform. The idea is that you illustrate concepts, taxonomies and relationships of the application domain independent of the solution domain! Cite @bruegge:2004:ObjectorientedSoftwareEngineering several times in this chapter.
-
 ]
+
+#functional-tests-table
 
 == Overview
 #TODO[

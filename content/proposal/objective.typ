@@ -24,15 +24,18 @@ The suite integrates tests for interactions with Artemis directly into Artemis' 
 
 == Implement a Scalable Load Testing Framework
 
-In educational settings, Theia Cloud must support hundreds of students working simultaneously, especially during programming exams @turdiu:2020:OnlineExamsArtemis. However, developers have not yet systematically tested its ability to handle high user loads. This thesis develops a load testing framework, as seen in @fig2, that can simulate realistic student interactions at scale. For illustration, the diagram presents a simplified architecture of the load testing framework using only two instances of Theia Cloud. In reality, the framework scales up to even more instances of Theia Cloud, depending on the available resources.
+In educational settings, Theia Cloud must support hundreds of students working simultaneously, especially during programming exams @turdiu:2020:OnlineExamsArtemis. However, developers have not yet systematically tested its ability to handle high user loads. This thesis develops a load testing framework, as seen in @fig2, that can simulate realistic student interactions at scale. For illustration, the diagram presents a simplified architecture of the load testing framework using an arbitrary number of instances of Theia Cloud. In reality, the framework scales up to a large number of instances of Theia Cloud, depending on the available resources.
+The test suite performs functional and scalability testing by interfacing with individual Theia instances using Playwright. It emulates user interactions by targeting UI elements through CSS selectors in a controlled, headless browser context.
 
 The framework models typical user workflows such as editing code, executing programs, and using the terminal to replicate real-world usage patterns. The tests measure latency, response times, and resource consumption under increasing load. They also identify the system's breaking point, where performance degrades or failures occur, to support targeted optimizations. The goal is to develop a scalable and repeatable methodology for evaluating the performance of Theia Cloud over time.
+
+
 
 This thesis sets up a separate testing environment to ensure that scaled tests do not interfere with the CI/CD development process. This environment is isolated from the production system, allowing for extensive load testing without impacting real users or pipeline building.
 
 #figure(
   image("/figures/proposal/deployment_diagram.svg", width: 100%),
-  caption: [Deployment Diagram of the scalable load testing framework using 2 instances of Theia Cloud],
+  caption: [Deployment Diagram of the scalable load testing framework using N instances of Theia Cloud],
 ) <fig2>
 
 == Analyze System Performance and Identify Bottlenecks
@@ -41,8 +44,10 @@ An important aspect of performance evaluation is understanding how system compon
 
 By correlating test results with system metrics, this analysis provides actionable insights into performance bottlenecks, such as slow UI interactions, server-side processing delays, or database constraints. The goal is to comprehensively evaluate Theia Cloud's scalability limits, helping system administrators and developers make informed decisions about optimizations and infrastructure scaling.
 
+#pagebreak()
+
 == Create Randomized and Personalized Tests Using LLMs
 
-The Model Context Protocol (MCP) is a tool for interacting with LLMs with context. By leveraging the MCP, this thesis also explores the possibility of generating tests that adapt to individual user profiles, preferences, and learning styles. This approach aims to enhance the realism and relevance of the testing scenarios, making them more representative of actual user interactions.
+The Model Context Protocol #footnote("https://modelcontextprotocol.io/")  (MCP) is a tool for interacting with LLMs with context. By leveraging the MCP, this thesis also explores the possibility of generating tests that adapt to individual user profiles, preferences, and learning styles. This approach aims to enhance the realism and relevance of the testing scenarios, making them more representative of actual user interactions.
 
 The thesis uses the MCP to create diverse test cases covering various programming languages, IDE features, and user behaviors. This allows for a more comprehensive evaluation of Theia Cloud's capabilities and performance under different conditions. The MCP component integrates the generated tests into the existing E2E test suite and thoroughly tests the system across various scenarios.
