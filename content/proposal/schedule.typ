@@ -2,7 +2,7 @@
 
 = Schedule
 
-The following key milestones structure the implementation timeline of this thesis. The Bachelor's thesis starts on 30.06.2025 and ends on 30.10.2025. Each milestone represents a concrete capability or achievement necessary to reach the final goal of a scalable, reliable testing solution for Theia Cloud within Artemis.
+The following key milestones structure the implementation timeline of this thesis. The Bachelor's thesis starts on 03.07.2025 and ends on 03.11.2025. Each milestone represents a concrete capability or achievement necessary to reach the final goal of a scalable, reliable testing solution for Theia Cloud within Artemis.
 
 - #strong[Milestone 1 (by 30.07.2025): Functional Integration Tests in Theia]
    
@@ -24,6 +24,6 @@ The following key milestones structure the implementation timeline of this thesi
    - Scalability testing of the IDE with multiple users
    - Performance testing of the IDE with multiple users
 
-- #strong[Milestone 4 (by 30.10.2025): LLM/MCP Integration]
+- #strong[Milestone 4 (by 03.11.2025): LLM/MCP Integration]
    
    A developer can run randomized, realistic test cases reflecting student behaviors and programming environments. By modeling context dynamically, tests adapt to a wide range of scenarios, including different programming languages and usage patterns. This enables scalable and flexible test generation that better simulates real-world conditions in systems like Theia Cloud.
