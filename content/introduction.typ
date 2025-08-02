@@ -35,13 +35,3 @@ The thesis will be structured as follows:
 #TODO[
   Describe the outline of your thesis
 ]
-
-== Objectives
-#TODO[
-  Describe the research goals and/or research questions and how you address them by summarizing what you want to achieve in your thesis, e.g. developing a system and then evaluating it.
-]
-
-== Outline
-#TODO[
-  Describe the outline of your thesis
-]
