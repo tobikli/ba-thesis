@@ -1,40 +1,137 @@
-#let functional-tests-table = table(
-  stroke: none,
-  gutter: 0.2em,
-  fill: (x, y) =>
-    if y == 0 { gray }
-    else { silver },
-  align: (x, y) =>
-    if x == 2 { center}
-    else { left },
-  inset: (right: 1.5em),
-  columns: 3,
-  [Name], [Assertions], [Status],
-  [Create file], [Assert if file appears in the file tree], [#text(green)[✓]],
-  [Create file with content], [Assert if content is displayed in the editor], [#text(green)[✓]],
-  [Undo and Redo], [Assert if content is restored after undo and redo], [#text(green)[✓]],
-  [Delete file], [Assert if file is deleted from the file tree], [#text(green)[✓]],
-  [Create file in folder], [Assert if file and folder appears in the file tree], [#text(green)[✓]],
-  [], [], [],
-  [], [], [],
-  [], [], [],
-  [], [], [],
+#let functional-tests-table = table( 
+  columns: (1fr), align: left, 
+  [*Editor Tests*],
+  [Create new File],
+  [Create File with content],
+  [Undo and Redo text in file],
+  [Delete file],
+  [Create new File in folder],
+  [Test copy from String],
+  [*Search Tests*],
+  [Search for text in the editor],
+  [Search for text using menu bar],
+  [Search for text using sidebar],
+  [Search for text using sidebar multiple files],
+  [*Terminal Tests*],
+  [Open Terminal],
+  [Terminal command: ls],
+  [Terminal command: touch],
+  [Terminal command: rm],
+  [Terminal multiple tabs],
+  [*Version Control Tests*],
+  [Commit],
+  [Push]
 )
 
-#let programming-tests-table = table(
-  stroke: none,
-  gutter: 0.2em,
-  fill: (x, y) =>
-    if y == 0 { gray }
-    else { silver },
-  inset: (right: 1.5em),
-  columns: 3,
-  [Name], [Assertions], [Status],
-  [Syntax highlighting], [Assert if file appears in the file tree], [],
-  [Build with correct syntax], [Assert if content is displayed in the editor], [],
-  [Build with wrong syntax], [Assert if content is restored after undo and redo], [],
-  [Run and compile successful], [Assert if file is deleted from the file tree], [],
-  [Run and compile unsuccessful], [Assert if file and folder appears in the file tree], [],
+#let programming-tests-table = table( 
+  columns: (1fr), align: left, 
+  [*C App Image*],
+  [C modules installed],
+  [Create C file],
+  [Compile C file],
+  [Run C file],
+  [*Java App Image*],
+  [Java modules installed],
+  [Create Java file],
+  [Compile Java file],
+  [Run Java file],
+  [*JavaScript App Image*],
+  [JavaScript modules installed],
+  [Create JavaScript file],
+  [Run JavaScript file],
+  [*Ocaml App Image*],
+  [Ocaml modules installed],
+  [Create Ocaml file],
+  [Compile Ocaml file],
+  [Run Ocaml file],
+  [*Python App Image*], 
+  [Python modules installed],
+  [Create Python file],
+  [Compile Python file],
+  [Run Python file],
+  [*Rust App Image*],
+  [Rust modules installed],
+  [Create Rust file],
+  [Run Rust file],
+  [Compile Rust file],
+  [Run Rust file]
+)
+
+#let programming-tests-table = table( 
+  columns: (1fr), align: left, 
+  [*C App Image*],
+  [C modules installed],
+  [Create C file],
+  [Compile C file],
+  [Run C file],
+  [*Java App Image*],
+  [Java modules installed],
+  [Create Java file],
+  [Compile Java file],
+  [Run Java file],
+  [*JavaScript App Image*],
+  [JavaScript modules installed],
+  [Create JavaScript file],
+  [Run JavaScript file],
+  [*Ocaml App Image*],
+  [Ocaml modules installed],
+  [Create Ocaml file],
+  [Compile Ocaml file],
+  [Run Ocaml file],
+  [*Python App Image*], 
+  [Python modules installed],
+  [Create Python file],
+  [Compile Python file],
+  [Run Python file],
+  [*Rust App Image*],
+  [Rust modules installed],
+  [Create Rust file],
+  [Run Rust file],
+  [Compile Rust file],
+  [Run Rust file]
+)
+
+#let landingpage-tests-table = table( 
+  columns: (1fr), align: left, 
+  [*Landing Page Tests (unauthenticated)*],
+  [Login button should be visible],
+  [Login should redirect to Keycloak],
+  [Login via the UI],
+  [*Landing Page Tests (authenticated)*],
+  [User should be logged in],
+  [Programming language instances should be visible],
+  [Launch C instance],
+)
+
+#let artemis-tests-table = table( 
+  columns: (1fr), align: left, 
+  [*Artemis Integration Tests*],
+  [Theia IDE loads from Artemis],
+  [Creation of course and exercise is possible],
+  [Repository is cloned],
+  [Student submits code],
+  [check result on Artemis]
+)
+
+#let scaling-tests-table = table( 
+  columns: (1fr), align: left, 
+  [*Load Tests Scenarios*],
+  [editBubbleSort],
+  [editMergeSort],
+  [editClient],
+  [editContext],
+  [editPolicy],
+  [editSortStrategy],
+  [commit],
+  [createNewRandomFile],
+  [createAndEditRandomFile],
+  [useTerminal],
+  [runTests],
+  [searchForWords],
+  [changePreferences],
+  [openAboutPage],
+  [reloadPage],
+  [buildAndRun]
 )
 
 // Preview
@@ -42,3 +139,9 @@
 #functional-tests-table
 #heading([Programming Tests])
 #programming-tests-table
+#heading([Landing Page Tests])
+#landingpage-tests-table
+#heading([Artemis Integration Tests])
+#artemis-tests-table
+#heading([Load Tests Scenarios])
+#scaling-tests-table

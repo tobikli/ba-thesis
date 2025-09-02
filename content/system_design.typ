@@ -24,23 +24,3 @@
 #TODO[
   This section describes how the subsystems are mapped onto existing hardware and software components. The description is accompanied by a UML deployment diagram. The existing components are often off-the-shelf components. If the components are distributed on different nodes, the network infrastructure and the protocols are also described.
 ]
-
-== Persistent Data Management
-#TODO[
-  Optional section that describes how data is saved over the lifetime of the system and which data. Usually this is either done by saving data in structured files or in databases. If this is applicable for the thesis, describe the approach for persisting data here and show a UML class diagram how the entity objects are mapped to persistent storage. It contains a rationale of the selected storage scheme, file system or database, a description of the selected database and database administration issues.
-]
-
-== Access Control
-#TODO[
-  Optional section describing the access control and security issues based on the nonfunctional requirements in the requirements analysis. It also de- scribes the implementation of the access matrix based on capabilities or access control lists, the selection of authentication mechanisms and the use of en- cryption algorithms.
-]
-
-== Global Software Control
-#TODO[
-  Optional section describing the control flow of the system, in particular, whether a monolithic, event-driven control flow or concurrent processes have been selected, how requests are initiated and specific synchronization issues
-]
-
-== Boundry Conditions
-#TODO[
-  Optional section describing the use cases how to start up the separate components of the system, how to shut them down, and what to do if a component or the system fails.
-]
