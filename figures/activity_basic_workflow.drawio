@@ -1,0 +1,53 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64; rv:142.0) Gecko/20100101 Firefox/142.0" version="28.2.0">
+  <diagram name="Page-1" id="geJmPsC-Qgyu1iLCh9Wq">
+    <mxGraphModel dx="1058" dy="912" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="XZie519DQL4sXko8tS1P-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="XZie519DQL4sXko8tS1P-2" target="XZie519DQL4sXko8tS1P-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XZie519DQL4sXko8tS1P-2" value="" style="ellipse;html=1;shape=startState;fillColor=light-dark(#000000,#000000);strokeColor=light-dark(#000000,#000000);" vertex="1" parent="1">
+          <mxGeometry x="398.5" y="60" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="XZie519DQL4sXko8tS1P-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="XZie519DQL4sXko8tS1P-4" target="XZie519DQL4sXko8tS1P-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XZie519DQL4sXko8tS1P-4" value="Save Keycloak Browser State" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=default;strokeColor=light-dark(#000000,#000000);fillStyle=auto;" vertex="1" parent="1">
+          <mxGeometry x="260" y="130" width="307" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="XZie519DQL4sXko8tS1P-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="XZie519DQL4sXko8tS1P-6" target="XZie519DQL4sXko8tS1P-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XZie519DQL4sXko8tS1P-6" value="Start Session for each App Image" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=default;strokeColor=light-dark(#000000,#000000);fillStyle=auto;" vertex="1" parent="1">
+          <mxGeometry x="260" y="210" width="307" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="XZie519DQL4sXko8tS1P-7" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=light-dark(#000000,#000000);" vertex="1" parent="1">
+          <mxGeometry x="398.5" y="530" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="XZie519DQL4sXko8tS1P-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="XZie519DQL4sXko8tS1P-9" target="XZie519DQL4sXko8tS1P-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XZie519DQL4sXko8tS1P-9" value="Run functional tests distributed on sessions" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=default;strokeColor=light-dark(#000000,#000000);fillStyle=auto;" vertex="1" parent="1">
+          <mxGeometry x="260" y="290" width="307" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="XZie519DQL4sXko8tS1P-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="XZie519DQL4sXko8tS1P-11" target="XZie519DQL4sXko8tS1P-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XZie519DQL4sXko8tS1P-11" value="Run App Image tests on distributed sessions" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=default;strokeColor=light-dark(#000000,#000000);fillStyle=auto;" vertex="1" parent="1">
+          <mxGeometry x="260" y="370" width="307" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="XZie519DQL4sXko8tS1P-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="XZie519DQL4sXko8tS1P-13">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="413.5" y="530" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XZie519DQL4sXko8tS1P-13" value="Run artemis integration test" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=default;strokeColor=light-dark(#000000,#000000);fillStyle=auto;" vertex="1" parent="1">
+          <mxGeometry x="260" y="450" width="307" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

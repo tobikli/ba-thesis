@@ -47,6 +47,13 @@ This thesis aims to ensure the reliability, usability, and scalability of Theia 
 #set heading(numbering: none)
 ===	Develop an automated Theia E2E testing suite
 To ensure the correctness and stability of Theia Cloud's interactive features, this thesis develops an automated E2E test suite using Playwright #footnote("https://playwright.dev/")<pwr>. The tests cover essential functionalities, including code editing, file management, terminal interactions, and version control integration.
+The basic structure of the test suite is shown in @fig2.
+
+#figure(
+  image("/figures/activity_basic_workflow.drawio.svg", height: 45%),
+  caption: [Basic Activity Diagram of functional tests workflow],
+) <fig2>
+
 
 ===	Implement a scalable load testing framework
 To evaluate Theia Cloud's performance under high demand, this thesis implements a scalable load testing framework using Artillery #footnote("https://artillery.io/")<art>. The tests simulate realistic user behavior, including concurrent file operations, terminal interactions, and version control operations.
@@ -63,15 +70,13 @@ The scalable load testing framework should be able to generate randomized and pe
 This thesis is organized into seven chapters as follows: \
 	*Chapter 1 Introduction*
 	presents the research problem and introduces to the existing system, its architecture and the motivation for building a automated testing framework for E2E and load testing. \
-	*Chapter 2 Background*
-	provides the necessary theoretical and technical foundations relevant to cloud-based IDEs, automated testing using Playwright, and scalability and load testing. \
-	*Chapter 3 Related Work*
+	*Chapter 2 Related Work*
 	reviews existing approaches and research in automated testing, performance evaluation, and educational IDEs. \
-	*Chapter 4 Requirements Analysis*
+	*Chapter 3 Requirements Analysis*
 	identifies and analyzes the functional and non-functional requirements for testing Theia Cloud. \
-  *Chapter 5 System Design*
+  *Chapter 4 System Design*
 	describes the architecture and implementation of the proposed testing framework, including E2E and load testing strategies. \
-  *Chapter 6 Case Study / Evaluation*
+  *Chapter 5 Case Study / Evaluation*
 	demonstrates the framework through practical experiments and evaluates its effectiveness in addressing the research objectives. \
-  *Chapter 7 Summary*
+  *Chapter 6 Summary*
 	summarizes the findings, discusses limitations, and outlines directions for future research. \

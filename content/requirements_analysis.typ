@@ -6,7 +6,7 @@
   This chapter follows the Requirements Analysis Document Template in @bruegge:2004:ObjectorientedSoftwareEngineering. Important: Make sure that the whole chapter is independent of the chosen technology and development platform. The idea is that you illustrate concepts, taxonomies and relationships of the application domain independent of the solution domain! Cite @bruegge:2004:ObjectorientedSoftwareEngineering several times in this chapter.
 ]
 
-== Proposed System
+== Requirements
 #TODO[
   If you leave out the section “Current system”, you can rename this section into “Requirements”.
 ]

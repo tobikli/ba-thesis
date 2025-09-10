@@ -1,0 +1,53 @@
+title Artemis Integration Test
+
+actor "Playwright Runner" as PR
+participant "Theia Client" as Theia
+participant "Landing Page" as Landing
+participant "Artemis" as Artemis
+
+activate PR
+activate PR
+PR->Artemis: Create and start exercise
+deactivate PR
+activate Artemis
+Artemis-->PR: Exercise page
+deactivate Artemis
+activate PR
+PR->Artemis: Select Online IDE
+deactivate PR
+activate Artemis
+Artemis-->Landing: Redirect with tokens
+deactivate Artemis
+activate Landing
+activate Landing
+Landing->PR: Request Login
+deactivate Landing
+activate PR
+PR-->Landing: Login
+deactivate PR
+activate Landing
+Landing->Theia: Start Session
+deactivate Landing
+deactivate Landing
+activate Theia
+activate Theia
+Theia->Artemis: Clone Repository
+deactivate Theia
+activate Artemis
+Artemis-->Theia: Clone Succesful
+deactivate Artemis
+activate Theia
+Theia-->PR: Display IDE
+deactivate Theia
+activate PR
+PR->Theia: Submit Template Solution
+deactivate PR
+activate Theia
+Theia->Artemis: Push Repository
+deactivate Theia
+activate Artemis
+Artemis->Artemis: Run tests
+Artemis-->PR: Display Result
+deactivate Artemis
+deactivate PR
+deactivate Theia

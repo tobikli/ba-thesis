@@ -1,3 +1,5 @@
 *.pdf
 !presentation_klingenberg.pdf
 docs/
+*.bkp
+.$*
