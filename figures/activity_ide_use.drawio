@@ -1,0 +1,69 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.0.6 Chrome/138.0.7204.100 Electron/37.2.3 Safari/537.36" version="28.0.6">
+  <diagram name="Page-1" id="8_s6YWGOPCkqM0lOdH8o">
+    <mxGraphModel dx="1229" dy="869" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="nJJAZ-XOM6rL0MfN30Jt-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="nJJAZ-XOM6rL0MfN30Jt-1" target="nJJAZ-XOM6rL0MfN30Jt-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nJJAZ-XOM6rL0MfN30Jt-1" value="" style="ellipse;html=1;shape=startState;fillColor=#000000;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="410" y="60" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="nJJAZ-XOM6rL0MfN30Jt-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="nJJAZ-XOM6rL0MfN30Jt-3" target="nJJAZ-XOM6rL0MfN30Jt-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nJJAZ-XOM6rL0MfN30Jt-3" value="Start Online IDE" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="338" y="130" width="175" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="nJJAZ-XOM6rL0MfN30Jt-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="nJJAZ-XOM6rL0MfN30Jt-5" target="nJJAZ-XOM6rL0MfN30Jt-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nJJAZ-XOM6rL0MfN30Jt-5" value="Install Extensions" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="338" y="290" width="175" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="nJJAZ-XOM6rL0MfN30Jt-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="nJJAZ-XOM6rL0MfN30Jt-7" target="nJJAZ-XOM6rL0MfN30Jt-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nJJAZ-XOM6rL0MfN30Jt-7" value="Clone Remote Repository" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="338" y="370" width="175" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="nJJAZ-XOM6rL0MfN30Jt-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="nJJAZ-XOM6rL0MfN30Jt-8" target="nJJAZ-XOM6rL0MfN30Jt-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nJJAZ-XOM6rL0MfN30Jt-8" value="Edit File" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="338" y="450" width="175" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="nJJAZ-XOM6rL0MfN30Jt-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="nJJAZ-XOM6rL0MfN30Jt-14" target="nJJAZ-XOM6rL0MfN30Jt-8">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="540" y="550" />
+              <mxPoint x="540" y="470" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nJJAZ-XOM6rL0MfN30Jt-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="nJJAZ-XOM6rL0MfN30Jt-14" target="nJJAZ-XOM6rL0MfN30Jt-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nJJAZ-XOM6rL0MfN30Jt-14" value="Build and run" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="338" y="530" width="175" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="nJJAZ-XOM6rL0MfN30Jt-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="nJJAZ-XOM6rL0MfN30Jt-16" target="nJJAZ-XOM6rL0MfN30Jt-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nJJAZ-XOM6rL0MfN30Jt-16" value="Change Preferences" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="338" y="210" width="175" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="nJJAZ-XOM6rL0MfN30Jt-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="nJJAZ-XOM6rL0MfN30Jt-22" target="nJJAZ-XOM6rL0MfN30Jt-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nJJAZ-XOM6rL0MfN30Jt-22" value="Commit and push" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#FFFFFF;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="338" y="610" width="175" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="nJJAZ-XOM6rL0MfN30Jt-24" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="411" y="690" width="30" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

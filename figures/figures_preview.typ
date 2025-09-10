@@ -1,12 +1,12 @@
 = MCP Figures
 #figure(
   image("/figures/mcp_local.drawio.svg", width: 100%),
-  caption: [Deployment Diagram of MCP running locally],
+  caption: [Hardware Software Mapping of MCP running locally],
 )
 
 #figure(
   image("/figures/mcp_remote.drawio.svg", width: 100%),
-  caption: [Deployment Diagram of MCP running in CI/CD],
+  caption: [Hardware Software Mapping of MCP running in CI/CD],
 )
 
 #figure(

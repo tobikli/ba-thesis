@@ -46,7 +46,7 @@ By addressing both functional correctness and load behavior in a unified framewo
 This thesis aims to ensure the reliability, usability, and scalability of Theia Cloud within Artemis by developing a structured, automated testing framework. This involves both E2E UI testing and scalability testing, enabling the identification of performance bottlenecks under real-world conditions @paul:2001:EndtoendIntegrationTesting. The key objectives of this thesis are:
 #set heading(numbering: none)
 ===	Develop an automated Theia E2E testing suite
-To ensure the correctness and stability of Theia Cloud's interactive features, this thesis develops an automated E2E test suite using Playwright #footnote("https://playwright.dev/")<pwr>. The tests cover essential functionalities, including code editing, file management, terminal interactions, and version control integration.
+To ensure the correctness and stability of Theia Cloud's interactive features, this thesis develops an automated E2E test suite. The tests cover essential functionalities, including code editing, file management, terminal interactions, and version control integration.
 The basic structure of the test suite is shown in @fig2.
 
 #figure(
