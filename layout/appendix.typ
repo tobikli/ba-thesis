@@ -7,9 +7,15 @@
 )
 
 #figure(
+  execution-functional-tests,
+  caption: [Execution of different playwright projects],
+) <execution-functional-tests>
+
+
+#figure(
   functional-tests-table,
   caption: [Newly developed functional tests],
-)
+) <functional-tests-table>
 
 #figure(
   programming-tests-table,

@@ -38,3 +38,23 @@ jobs:
         
 
 ```
+
+#let execution-functional-tests = ```bash
+
+ - To run the functional tests, run:
+  npx playwright test --project=local
+
+  - To run the load tests, run:
+  npx playwright test --project=scale
+
+  - To run the Artemis integration tests, run:
+  npx playwright test --project=artemis
+
+  - Set the amount of instances in the ENV file or pass it like this:
+  NUM_INSTANCE=100 npx playwright test --project=scale
+
+  - To run the tests using the Artillery.io framework, run:
+  npx artillery run tests/ide/scalable/artillery/Artillery.ts
+  
+
+```
