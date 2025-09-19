@@ -99,43 +99,45 @@ This test is divided into several test steps, which are executed in the given or
 == Load Testing <loadtesting>
 The load tests are responsible for testing the performance of the system under load. In the following, we will present the architecture of the load tests, as well as the Deployment Diagram used in the test suite. As load tests are typically not part of E2E testing, but rather part of testing APIs under load, we will present a custom load testing architecture native for Playwright, as well as one that utilizes the framework `Artillery.io` @art.
 
-=== Subsystem Decomposition
-#TODO[
-Subsystem Decomposition
-]
+=== Load Testing Architecture
+One of the approaches of running load tests using Playwright is to use the `Artillery.io` framework @art. This framework is a tool for running load tests using a simple YAML configuration file or by using a JavaScript file. The deployment diagram in @loadarchitecture shows the architecture of the load tests using the `Artillery.io` framework. The `Artillery.io` framework utilizes Playwright as the engine to run a function on each runner. Each runner uses a separate instance of the Theia Session running in the K8s Cluster. The `Artillery.io` framework is responsible for scaling the number of runners to the given number of instances. Running tests is divided into phases, each given two specific parameters: the duration of the phase and the arrival rate. These parameters allow us to control the load testing by defining how often new runners are created and how long they run.
 
+Every runner runs the predefined function `virtualStudent` which defines the workflow of the virtual student. After setting up the IDE environment, the runner picks a random scenario from the predefined scenarios listed in @scenarios and executes the workflow until the phase is finished.
 
-=== Deployment Diagram
-#TODO[
-Das Artillery.io Deployment Diagram.
-]
 #figure(
   image("/figures/load_architecture.drawio.svg", width: 100%),
   caption: [Deployment Diagram of Load Testing Architecture using Artillery and N instances of a Theia Session],
-)
+) <loadarchitecture>
+
+As seen in @loadarchitecture, the Artillery Runner runs in the Playwright Executor, and spins up 1..N new runners, which are then each accesing the single Theia Landing Page and one of the N Theia Instance Clients running in the Headless Browser Environment. Both of these components access the Theia Operator and Theia Session API running in the K8s Cluster, similar to proposed architecture in @deploymentdiagramfunctional.
+
 
 == MCP Testing <mcptesting>
 
-=== Hardware Software Mapping
-#TODO[
-Beide Subsysteme zeigen (local und remote)
-]
+Model Context Protocol is a tool for interacting with LLMs with context. By leveraging the MCP, this thesis also explores the possibility of generating tests that adapt to individual user profiles, preferences, and learning styles. This approach aims to enhance the realism and relevance of the testing scenarios, making them more representative of actual user interactions. As MCP is already a established protocol, we divided the MCP testing into two parts: the MCP Client running locally on one of the supported IDEs and a custom MCP Client that potentially could run in the CI/CD pipeline.
+
+=== Local MCP Client
+The most common setup for MCP is to run the MCP Server inside of a Docker container or in a process started by the MCP Client. The most popular IDEs, including Theia, VSCode and Cursor, support MCP natively. Providing the prebuild Playwright MCP Server #footnote("https://github.com/microsoft/playwright-mcp") to the MCP Client allows the IDE to connect the MCP Server with the LLM. As seen in @mcplocal, the IDE acts as the MCP Client and runs the Playwright MCP Server, as well as the LLM Agent. Depending on the setup of the IDE, the connection with the LLM Model running on a remote server is established and allows the MCP Client to send and receive messages from the LLM. The MCP Client then utilized the MCP Interface to give access to the MCP Server tools to the LLM. Each time the LLM wants to interact with the MCP Server, it sends a message to the MCP Client, which then sends the message to the MCP Server. The Server, depending on where its running, can then execute Playwright Commands, such as navigating to a specific page or clicking on a specific element. Meanwhile, the IDE allows User Inputs to be passed to the MCP Client, which then sends the message to the LLM to give the proper Prompt for testing the system.
+
 #figure(
   image("/figures/mcp_local.drawio.svg", width: 100%),
   caption: [Hardware Software Mapping of MCP running locally],
-)
+) <mcplocal>
+
+=== Remote MCP Client
+As we potentially dont want to be dependent on a specific IDE, we also explore the possibility of running a custom MCP Client, which can be used in the CI/CD pipeline. As seen in @mcpremote, we first manually start the MCP Server and then start a custom MCP Client, which connects to the MCP Server using the MCP Interface and the LLM Server using the appropriate API. The custom MCP Client then automatically sends the predefined prompt to the LLM and waits for the response. The response is then passed to the MCP Server, which then executes the Playwright Commands, such as navigating to a specific page or clicking on a specific element.
 
 #figure(
   image("/figures/mcp_remote.drawio.svg", width: 100%),
   caption: [Hardware Software Mapping of MCP running in CI/CD],
-)
+) <mcpremote>
 
+==== Activity Diagram
+To further illustrate the workflow of the MCP Client, we present the activity diagram in @activitymcpcomplex.
 
-=== Activity Diagram
-#TODO[
-Beide bzw. wenn nur das komplexe Diagramm
-]
 #figure(
   image("/figures/activity_mcp_complex.drawio.svg", width: 80%),
   caption: [Activity Diagram of standalone MCP Client Connection],
-)
+) <activitymcpcomplex>
+
+As seen in @activitymcpcomplex, we individually start the LLM, the MCP Client and the Playwright MCP Server. The MCP Server first initiates the Playwright Browser and then waits for the MCP Client to connect. The MCP Client then connects to the MCP Server and sends the Toolkit provided by the MCP Server as well as the Prompt to the LLM. The LLM then resolves the MCP Commands and sends a message to the MCP Client, which then sends the message to the MCP Server. The MCP Server then executes the Playwright Commands, such as navigating to a specific page or clicking on a specific element. The MCP Server returns the result to the MCP Client, which then returns the result to the LLM. The LLM then analyzes the result and either returns the result to the MCP Client or further commands to the MCP Server.

@@ -35,4 +35,4 @@
 #figure(
   scaling-tests-table,
   caption: [All scenarios accessed by the load testing framework],
-)
+) <scenarios>
