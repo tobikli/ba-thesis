@@ -4,7 +4,7 @@
 
 E2E testing has become an integral part of modern software development practices, enabling developers to validate the functionality of entire workflows from the perspective of the end user @paul:2001:EndtoendIntegrationTesting. In recent years, a variety of frameworks have emerged for E2E testing, with Playwright #footnote("https://playwright.dev/")<pwr>, developed by Microsoft, standing out due to its cross-browser support, reliable automation capabilities, and ease of integration into CI/CD pipelines.
 
-== E2E Testing with Playwright
+== E2E Testing With Playwright
 
 Playwright has been adopted across a wide range of projects, from web applications to complex interactive platforms. Its strengths lie in its ability to automate user interactions across multiple browsers (Chromium, Firefox, and WebKit), while offering features such as network interception, precise control over timeouts, and built-in support for parallel execution. Studies and case reports have demonstrated that Playwright is well-suited for verifying user flows that involve complex asynchronous operations, such as form submissions, authentication procedures, or real-time updates @halilaj:2025:ComparativeEvaluationEndtoEnd.
 
@@ -13,7 +13,7 @@ Compared to earlier tools such as Selenium and Cypress, Playwright's architectur
 === Use Case Scenario
 Playwright provides several benefits to the scenario addressed in this thesis. First, it enables the automation of student workflows in the IDE through realistic browser-driven interactions, such as editing code, running programs, and using version control. Second, its reliability in handling dynamic content and asynchronous operations is essential, since online IDEs often involve real-time updates and collaborative features. Third, Playwright integrates well with modern development environments and can be easily extended with load testing tools or monitoring systems, making it a suitable foundation for both correctness testing and performance evaluation. Finally, its open-source nature and active community support ensure long-term maintainability and adaptability to evolving requirements.
 
-== E2E Testing of Online IDEs
+== E2E Testing Of Online IDEs
 
 The testing of Online IDEs presents unique challenges due to their highly interactive and resource-intensive nature. Unlike traditional web applications, Online IDEs must support continuous user interaction in areas such as file editing, syntax highlighting, version control integration, and terminal execution. These interactions are not only event-driven but often require real-time feedback, making E2E testing a non-trivial task.
 
@@ -21,7 +21,7 @@ Although research on automated testing of Online IDEs is still limited, some ini
 
 In practice, most Online IDE test strategies focus on the correctness of basic workflows (e.g., file creation, compilation, terminal commands) rather than large-scale stress testing. Thus, there exists a gap in research concerning how E2E testing frameworks can be systematically applied to Online IDEs in educational or exam settings.
 
-== End-to-End Testing within Artemis
+== End-to-End Testing Within Artemis
 
 Artemis, the learning platform developed at the Technical University of Munich, has integrated automated testing approaches to ensure the reliability of its features, including exercise management, grading pipelines, and interactive programming assignments. Within Artemis, E2E testing is employed to validate workflows that students and instructors rely on, such as creating exercises, submitting solutions, and receiving feedback.
 

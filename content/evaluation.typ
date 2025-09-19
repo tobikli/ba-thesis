@@ -38,7 +38,7 @@ One of the possible solutions was to dynamically remove the sandbox attribute fr
 
 Removing the CORS restrictions in the browser settings of Playwright also did not achieve the desired result. Therefore, further attempts to include the Scorpio extension in the workflow of the Artemis integration tests were not made, as the priority of this thesis was to develop a testing framework for Theia Cloud.
 
-=== Testing local and production system <localtestingchallenges>
+=== Testing Local And Production System <localtestingchallenges>
 To cross-check the functionality of the testing framework, the tests are able to test against the running system as well as against a local system. The local system only includes a single Theia Session running in the local Docker container.
 
 Because of several differences between the local and production system, challenges were encountered when running the same tests against both systems.
@@ -51,14 +51,14 @@ These differences include:
 
 - Different CSS locators: During the development of the testing framework, we noticed that the CSS locators of the production system were not equal to the CSS locators of the local system. This is because the production system utilizes a different version of the Theia IDE and therefore has a different DOM structure. Updating the version of the Theia IDE in the production system solved this issue.
 
-=== Parallel testing in one session
-As discussed in @localtestingchallenges, the priority of the testing framework is to test a production system running on a cluster with scaling capabilities. As we don't want to start a new instance for each test, we utilize running tests in parallel in one session. 
+=== Parallel Testing In One Session
+The priority of the testing framework is to test a production system running on a cluster with scaling capabilities. As we don't want to start a new instance for each test, we utilize running tests in parallel in one session. 
 
 During development, we noticed that the tests that were running in parallel interfered with each other. Especially the tests that created new files or directories interfered with each other. This is because the tests often created files while another test opened a file using the explorer view, which resulted in the file list being updated and file nodes not being found.
 
 To solve this issue, the tests were refactored to create a temporary workspace for each test file in the root workspace. Tests in a single test file are run sequentially, thereby avoiding the interference of the tests.
 
-=== Running tests using a single account
+=== Running Tests Using A Single Account
 
 Testing the scalability of the system is a crucial part of this thesis. In the production system, we utilize a single account for all tests. Because sessions are binded to user accounts provided by `Keycloak` #footnote("https://www.keycloak.org/"), we are not able to create new users for each test. Therefore, we have to use the same test account for all tests. 
 While running the load tests on the cluster, we notices that there is a session limit for each user account. This means that we were not able to run the load tests with more than 10 instances at the same time.

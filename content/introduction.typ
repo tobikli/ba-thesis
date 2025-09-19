@@ -25,7 +25,7 @@ The reliability and scalability of browser-based IDEs are critical to modern pro
   caption: [Example View for a student during a programming exam using Theia Cloud],
 ) <fig1>
 
-=== Instructors and Students
+=== Instructors And Students
 For instructors and educational institutions, a robust IDE infrastructure enables the creation of richer and more complex exercises without being limited by technical uncertainties. When instructors can assume a stable baseline for the environment, they can design tasks that emphasize problem-solving, algorithmic thinking, and creativity rather than troubleshooting setup issues. This shift allows more focus on pedagogy while also reducing the support burden during courses and exams.
 
 === Operational Perspective
@@ -55,13 +55,13 @@ The basic structure of the test suite is shown in @fig2.
 ) <fig2>
 
 
-===	Implement a scalable load testing framework
+===	Implement A Scalable Load Testing Framework
 To evaluate Theia Cloud's performance under high demand, this thesis implements a scalable load testing framework using Artillery #footnote("https://artillery.io/")<art>. The tests simulate realistic user behavior, including concurrent file operations, terminal interactions, and version control operations.
 
-===	Analyze system performance and identify bottlenecks
+===	Analyze System Performance And Identify Bottlenecks
 This thesis analyzes the performance of Theia Cloud under load, identifying bottlenecks in the system's response time and resource utilization. The goal is to comprehensively evaluate Theia Cloud's scalability limits, helping system administrators and developers make informed decisions about optimizations and infrastructure scaling.
 
-===	Create randomized and personalized tests using LLMs
+===	Create Randomized And Personalized Tests Using LLMs
 The scalable load testing framework should be able to generate randomized and personalized tests using LLMs to ensure the test suite is comprehensive and effective. It uses the MCP (Model Context Protocol) #footnote("https://modelcontextprotocol.io/")<mcp> to create diverse test cases covering various programming languages, IDE features, and user behaviors. This allows for a more comprehensive evaluation of Theia Cloud’s capabilities and performance under different conditions. 
 
 #set heading(numbering: "1.1")
