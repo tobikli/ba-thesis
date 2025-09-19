@@ -128,7 +128,7 @@
 
     // Main body. Reset page numbering.
   set page(numbering: "1")
-  counter(page).update(1)
+  counter(page).update(11)
   set par(justify: true, first-line-indent: 2em)
 
   body
