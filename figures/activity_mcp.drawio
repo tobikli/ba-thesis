@@ -1,0 +1,75 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64; rv:142.0) Gecko/20100101 Firefox/142.0" version="28.2.0">
+  <diagram name="Page-1" id="mfRp2JfwQVPLF7MNsXcm">
+    <mxGraphModel dx="882" dy="760" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ZWAMG0P6H3zZKY8pgr_Y-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ZWAMG0P6H3zZKY8pgr_Y-1" target="ZWAMG0P6H3zZKY8pgr_Y-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZWAMG0P6H3zZKY8pgr_Y-1" value="" style="ellipse;html=1;shape=startState;fillColor=light-dark(#000000,#000000);strokeColor=light-dark(#000000,#000000);" vertex="1" parent="1">
+          <mxGeometry x="411.5" y="70" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZWAMG0P6H3zZKY8pgr_Y-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ZWAMG0P6H3zZKY8pgr_Y-3" target="ZWAMG0P6H3zZKY8pgr_Y-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZWAMG0P6H3zZKY8pgr_Y-3" value="&lt;div&gt;LLM connects to MCP Interface&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=default;strokeColor=light-dark(#000000,#000000);fillStyle=auto;" vertex="1" parent="1">
+          <mxGeometry x="273" y="140" width="307" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ZWAMG0P6H3zZKY8pgr_Y-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ZWAMG0P6H3zZKY8pgr_Y-6" target="ZWAMG0P6H3zZKY8pgr_Y-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZWAMG0P6H3zZKY8pgr_Y-6" value="Starting MCP Playwright Server" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=default;strokeColor=light-dark(#000000,#000000);fillStyle=auto;" vertex="1" parent="1">
+          <mxGeometry x="273" y="220" width="307" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ZWAMG0P6H3zZKY8pgr_Y-20" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=light-dark(#000000,#000000);" vertex="1" parent="1">
+          <mxGeometry x="411.5" y="690" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ZWAMG0P6H3zZKY8pgr_Y-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ZWAMG0P6H3zZKY8pgr_Y-23" target="ZWAMG0P6H3zZKY8pgr_Y-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZWAMG0P6H3zZKY8pgr_Y-23" value="&lt;div&gt;Transmit prompt to LLM&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=default;strokeColor=light-dark(#000000,#000000);fillStyle=auto;" vertex="1" parent="1">
+          <mxGeometry x="273" y="300" width="307" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ZWAMG0P6H3zZKY8pgr_Y-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ZWAMG0P6H3zZKY8pgr_Y-24" target="ZWAMG0P6H3zZKY8pgr_Y-27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZWAMG0P6H3zZKY8pgr_Y-24" value="Receive MCP Instructions" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=default;strokeColor=light-dark(#000000,#000000);fillStyle=auto;" vertex="1" parent="1">
+          <mxGeometry x="273" y="380" width="307" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ZWAMG0P6H3zZKY8pgr_Y-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ZWAMG0P6H3zZKY8pgr_Y-27" target="ZWAMG0P6H3zZKY8pgr_Y-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZWAMG0P6H3zZKY8pgr_Y-27" value="Execute MCP Instruction" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=default;strokeColor=light-dark(#000000,#000000);fillStyle=auto;" vertex="1" parent="1">
+          <mxGeometry x="273" y="460" width="307" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ZWAMG0P6H3zZKY8pgr_Y-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ZWAMG0P6H3zZKY8pgr_Y-28" target="ZWAMG0P6H3zZKY8pgr_Y-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ZWAMG0P6H3zZKY8pgr_Y-28" value="Return Playwright DOM to LLM" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=default;strokeColor=light-dark(#000000,#000000);fillStyle=auto;" vertex="1" parent="1">
+          <mxGeometry x="273" y="540" width="307" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ZWAMG0P6H3zZKY8pgr_Y-32" value="LLM is finished" style="rhombus;whiteSpace=wrap;html=1;fontColor=#000000;fillColor=#FFFFFF;strokeColor=light-dark(#000000,#000000);" vertex="1" parent="1">
+          <mxGeometry x="358.25" y="610" width="136.5" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="ZWAMG0P6H3zZKY8pgr_Y-33" value="no" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=light-dark(#000000,#000000);rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" source="ZWAMG0P6H3zZKY8pgr_Y-32" parent="1" target="ZWAMG0P6H3zZKY8pgr_Y-24">
+          <mxGeometry x="-0.8784" relative="1" as="geometry">
+            <mxPoint x="560" y="630" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="630" y="630" />
+              <mxPoint x="630" y="400" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZWAMG0P6H3zZKY8pgr_Y-34" value="yes" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;verticalAlign=top;endArrow=open;endSize=8;strokeColor=light-dark(#000000,#000000);rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" source="ZWAMG0P6H3zZKY8pgr_Y-32" parent="1" target="ZWAMG0P6H3zZKY8pgr_Y-20">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="427" y="710" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

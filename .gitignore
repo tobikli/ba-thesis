@@ -1,0 +1,7 @@
+*.pdf
+!presentation_klingenberg.pdf
+presentation_klingenberg.key
+docs/
+*.bkp
+.$*
+examples

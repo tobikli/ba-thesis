@@ -1,0 +1,5 @@
+= Abstract
+
+Theia Cloud is a fully browser-based IDE that enables users to write, execute, and manage code without local installations. In large-scale educational platforms, ensuring the functional correctness and performance stability of browser-based IDEs like Theia poses a scientific challenge due to their interactive complexity and highly concurrent usage patterns.
+
+This thesis aims to investigate these challenges by developing a testing framework for Theia Cloud, focusing on end-to-end UI testing to verify the correctness and stability of interactive features and scalability and load testing by simulating realistic user interactions to evaluate Theia Cloud's performance under high concurrent usage. The proposed approach involves designing a maintainable Playwright test suite, developing a scalable test infrastructure, and analyzing system performance.

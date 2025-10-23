@@ -1,0 +1,13 @@
+// Enter your thesis data here:
+#let titleEnglish = "Load Testing and Performance Evaluation of the Theia Online IDE"
+#let titleGerman = "Belastungstests und Leistungsbewertung der Theia Online IDE"
+#let degree = "Bachelor"
+#let program = "Informatics"
+#let supervisor = "Prof. Dr. Stephan Krusche"
+#let advisors = ("Matthias Linhuber, M.Sc.",)
+#let author = "Tobias Wen Klingenberg"
+#let birthdate = datetime(day: 26, month: 05, year: 2003) // only necessary for registration certificate
+#let startDate = datetime(day: 03, month: 07, year: 2025)
+#let submissionDate = datetime(day: 03, month: 11, year: 2025)
+#let presentationDate = datetime(day: 23, month: 10, year: 2025)
+#let feedbacklogSubmissionDate = datetime(day: 03, month: 11, year: 2025)
