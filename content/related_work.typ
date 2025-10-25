@@ -2,7 +2,7 @@
 
 = Related Work
 
-E2E testing has become an integral part of modern software development practices, enabling developers to validate the functionality of entire workflows from the perspective of the end user @paul:2001:EndtoendIntegrationTesting. In recent years, a variety of frameworks have emerged for E2E testing, with Playwright #footnote("https://playwright.dev/")<pwr>, developed by Microsoft, standing out due to its cross-browser support, reliable automation capabilities, and ease of integration into CI/CD pipelines.
+E2E testing has become an integral part of modern software development practices, enabling developers to validate entire workflows' functionality from the end user's perspective @paul:2001:EndtoendIntegrationTesting. In recent years, a variety of frameworks have emerged for E2E testing, with Playwright #footnote("https://playwright.dev/")<pwr>, developed by Microsoft, standing out due to its cross-browser support, reliable automation capabilities, and ease of integration into CI/CD pipelines.
 
 == E2E Testing With Playwright
 
@@ -19,7 +19,7 @@ The testing of Online IDEs presents unique challenges due to their highly intera
 
 Although research on automated testing of Online IDEs is still limited, some initiatives have begun to explore automated validation of cloud-based programming environments. A notable example is a bachelor's thesis at Brno University of Technology, which developed a UI testing module for Eclipse Che that is compatible with the VS Code Extension Tester. The work highlights several core challenges: system libraries used in traditional local IDE testing cannot be reused in a cloud context, test stability is impacted in resource-constrained environments, and component abstractions must be introduced to allow cross-IDE compatibility. The module was built on Selenium WebDriver, which is the foundation of the VS Code Extension Tester. Selenium enabled simulation of user interactions with the graphical interface, but also introduced complexities such as managing multiple browser drivers and handling asynchronous waits. The author notes that while Selenium's explicit waits are essential, its implicit waits cannot be combined without causing unstable behavior, which complicates reliable test execution in CI environments @lorinc:2021:ExtensionEclipseChe.
 
-In practice, most Online IDE test strategies focus on the correctness of basic workflows (e.g., file creation, compilation, terminal commands) rather than large-scale stress testing. Thus, there exists a gap in research concerning how E2E testing frameworks can be systematically applied to Online IDEs in educational or exam settings.
+In practice, most Online IDE test strategies focus on the correctness of basic workflows (e.g., file creation, compilation, terminal commands) rather than large-scale stress testing. Thus, there is a research gap concerning how E2E testing frameworks can be systematically applied to Online IDEs in educational or exam settings.
 
 == E2E Testing Within Artemis
 
