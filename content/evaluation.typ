@@ -34,21 +34,21 @@ These differences include:
 
 - Handling of workspaces: The local system utilizes workspaces in the file system of the local Docker container. Therefore, tests can create temporary directories for each workspace to separate test workflows. The production system does not utilize workspaces similarly, as the user can only access the pre-made workspace in the container under the `/home/project` directory.
 
-- Landing page: As we only utilize a single Theia Session in the local system, there is no need to log in or rely on the landing page. This makes it more challenging to differentiate between the test setup of the local system and the production systems' test setup.
+- Landing page: As we only utilize a single Theia Session in the local system, there is no need to log in or rely on the landing page. This differentiation makes it more challenging to distinguish between the test setup of the local system and the production systems' test setup.
 
 - Different CSS locators: During the development of the testing framework, we noticed that the CSS locators of the production system were not equal to the CSS locators of the local system. That is because the production system utilizes a different version of the Theia IDE and has a different DOM structure. Updating the version of the Theia IDE in the production system solved this issue.
 
 === Parallel Testing In One Session
 The priority of the testing framework is to test a production system running on a cluster with scaling capabilities. As we do not want to start a new instance for each test, we run tests in parallel in one session. 
 
-During development, we noticed that the tests running in parallel interfered with each other. The tests that created new files or directories interfered with each other because they often created files simultaneously when another test opened a file using the explorer view, which resulted in the file list being updated and file nodes not being found.
+During development, we noticed that the tests running in parallel interfered with each other. The tests that created new files or directories interfered with each other because they often created files simultaneously when another test opened a file using the explorer view, which resulted in the IDE updating the file list. Therefore, the tests could not find the corresponding file nodes.
 
-To solve this issue, we refactored the tests to create a temporary workspace for each test file in the root workspace. Tests in a single test file are run sequentially, avoiding interference from the other tests.
+To solve this issue, we refactored the tests to create a temporary workspace for each test file in the root workspace. Tests in a single test file run sequentially, avoiding interference from the other tests.
 
 === Running Tests Using A Single Account
 
 Testing the scalability of the system is a crucial part of this thesis. In the production system, we utilize a single account for all tests. We cannot create new users for each test because sessions are bound to user accounts provided by `Keycloak` #footnote("https://www.keycloak.org/"). Therefore, we have to use the same test account for all tests. 
-While running the load tests on the cluster, we noticed a session limit for each user account. This means that we were not able to run the load tests with more than 10 instances at the same time.
+While running the load tests on the cluster, we noticed a session limit for each user account. Therefore, we were not able to run the load tests with more than 10 instances at the same time.
 
 
 == Test Infrastructure and Execution Strategy Limitations
@@ -57,7 +57,7 @@ The developed test suite relies on two separate testing environments: the Artemi
 
 === Integration Limitations in the Artemis E2E Pipeline
 
-During implementation, it was not feasible to integrate the Theia-related tests directly into the Artemis end-to-end testing pipeline. The primary reason for this limitation is that the Artemis testing environment operates in an isolated context, without access to external services that are not deployed within the same containerized setup. Since Theia Cloud is managed and deployed independently, we could not establish a direct communication between Artemis and Theia within the pipeline.
+During implementation, it was not feasible to integrate the Theia-related tests directly into the Artemis end-to-end testing pipeline. The primary reason for this limitation is that the Artemis testing environment operates in an isolated context, without access to external services not deployed within the same containerized setup. Since Theia Cloud is managed and deployed independently, we could not establish direct communication between Artemis and Theia within the pipeline.
 
 An additional constraint arises from deploying an extra Theia instance inside the Artemis CI environment, requiring significant resources and configuration overhead. This setup would complicate the testing workflow and increase the maintenance burden, without substantial benefit for the current development focus. Therefore, this approach was deemed infeasible.
 
@@ -69,8 +69,8 @@ As a result, all tests requiring integration between Artemis and Theia Cloud run
 
 Due to the nature of the load tests, we intentionally decided not to run them automatically in the CI/CD pipeline. Load tests can generate high system utilization and may interfere with ongoing development or active system usage. Instead, developers execute such tests manually when evaluating performance or verifying changes that may impact scalability.
 
-At the project's current stage, no significant modifications are being made to client-facing features or the user interface. Therefore, performing manual validation combined with targeted redeployments provides a more efficient and controlled testing workflow than running automated tests on every pull request.
+We are not significantly modifying client-facing features or the user interface at the project's current stage. Therefore, performing manual validation combined with targeted redeployments provides a more efficient and controlled testing workflow than running automated tests on every pull request.
 
 === MCP Testing Status
 
-The integration of Model Context Protocol based testing is still in an experimental phase and not yet included in the automated test pipelines. The current MCP implementation requires connectivity to Anthropic's Claude #footnote("https://www.anthropic.com/") models and other specialized infrastructure components unavailable in the cloud-based testing environment. Consequently, automated execution and continuous deployment of these tests are not yet possible. Future work will focus on stabilizing the MCP testing components and integrating them into a dedicated pipeline once the necessary infrastructure becomes available.
+Model Context Protocol-based testing integration is still experimental and not yet included in the automated test pipelines. The current MCP implementation requires connectivity to Anthropic's Claude #footnote("https://www.anthropic.com/") models and other specialized infrastructure components unavailable in the cloud-based testing environment. Consequently, automated execution and continuous deployment of these tests are not yet possible. Future work will focus on stabilizing the MCP testing components and integrating them into a dedicated pipeline once the necessary infrastructure becomes available.

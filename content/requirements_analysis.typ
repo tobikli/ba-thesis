@@ -20,7 +20,7 @@ The activity diagram shown in @fig3 showcases a typical student workflow for an 
 ) <fig3>
 
 ==== Use Case Model
-Focusing on the integration of the IDE with Artemis, we can derive the following use case models, as shown in @fig4.
+Focusing on integrating the IDE with Artemis, we can derive the following use case models, as shown in @fig4.
 
 #figure(
   image("/figures/usecase_ide.drawio.svg", width: 100%),
@@ -31,16 +31,16 @@ Students primarily interact with the IDE to perform programming tasks. Their cor
 
 Instructors, on the other hand, rely on the IDE and its integration with Artemis to support teaching activities. Their use cases include ensuring that language tools are available out of the box, without requiring manual setup for different programming languages. They also require secure authentication and session management, both to protect student data and to enforce academic integrity. Furthermore, instructors expect the system to be scalable, capable of supporting many concurrent users without performance degradation, and to be seamlessly connected with exams and exercises hosted on Artemis. These requirements ensure that instructors can confidently use the IDE for both regular coursework and high-stakes assessments.
 
-Together, these use cases highlight the dual perspective of students and instructors and underscore the system's role as a bridge between interactive coding environments and the educational infrastructure provided by Artemis. By analyzing these use cases, we can identify the requirements for the system under test and thereby conclude the functional requirements for the proposed functional testing system.
+Together, these use cases highlight the dual perspective of students and instructors and underscore the system's role as a bridge between interactive coding environments and the educational infrastructure provided by Artemis. By analyzing these use cases, we can identify the requirements for the system under test and conclude the functional requirements for the proposed functional testing system.
 
 == Proposed System <proposedsystem>
-As there is currently no existing system that can perform automated E2E testing and load testing for an Online Integrated Development Environment IDE, we propose a new system. 
+We propose a new system because there is currently no system that can perform automated E2E testing and load testing for an Online Integrated Development Environment IDE. 
 
 === Functional Requirements <functionalrequirements>
 By assessing the previous dynamic models, we can derive the following functional and non-functional requirements according to the requirements analysis by Bruegge et al. @bruegge:2004:ObjectorientedSoftwareEngineering:
 
 - *FR1. Simulate User Interactions*:
-The system must be able to simulate realistic user interactions within the IDE, including opening, editing, and saving files, using the terminal to compile and run programs, managing projects or exercises, and performing version control operations such as committing, pushing, and pulling changes. It must support the execution of sequences of actions that accurately mimic real student workflows.
+The system must simulate realistic user interactions within the IDE, including opening, editing, and saving files, using the terminal to compile and run programs, managing projects or exercises, and performing version control operations such as committing, pushing, and pulling changes. It must support the execution of sequences of actions that accurately mimic real student workflows.
 
 - *FR2. Automated End-to-End Testing*:
 The system must provide automated E2E testing capabilities to verify the correctness of IDE features. It should allow test scenarios to be defined, reused, and parameterized to cover different workflows and use cases, and it must detect errors or failures in core functionality.
@@ -49,26 +49,26 @@ The system must provide automated E2E testing capabilities to verify the correct
 The system must also support load and performance testing by simulating multiple concurrent users. It should measure response times, throughput, and error rates under varying levels of load, and it must be capable of reproducing peak usage scenarios, such as those observed during exams or large-scale course sessions.
 
 - *FR4. Monitoring and Reporting*:
-During testing, the system must collect relevant performance and behavioral metrics. It should generate detailed reports summarizing test results, errors, and bottlenecks, and provide visualizations or summaries that are easily interpretable by developers and system administrators.
+During testing, the system must collect relevant performance and behavioral metrics. It should generate detailed reports summarizing test results, errors, and bottlenecks, and provide visualizations or summaries easily interpretable by developers and system administrators.
 
 - *FR5. Scenario Management*:
-The system must allow test scenarios to be defined, configured, and managed efficiently. This includes the ability to configure user behavior profiles and test parameters, and to enable repeatable execution of scenarios for regression testing and validation of system stability over time.
+The system must allow test scenarios to be defined, configured, and managed efficiently, including the ability to configure user behavior profiles and test parameters, and to enable repeatable execution of scenarios for regression testing and validation of system stability over time.
 
 - *FR6. Integration with Intelligent Agents*:
 The system should support integration of intelligent agents based on the Model Context Protocol. These agents can simulate adaptive and realistic student behavior, and their behavior should be customizable to represent different skill levels or interaction patterns.
 
 
 === Nonfunctional Requirements <nonfunctionalrequirements>
-In this section, we list the requirements that are not directly related to the system's functionality. We categorize them using the FURPS+ model (Functionality, Usability, Reliability, Performance, Supportability, and Constraints)  described in @bruegge:2004:ObjectorientedSoftwareEngineering:
+This section lists the requirements not directly related to the system's functionality. We categorize them using the FURPS+ model (Functionality, Usability, Reliability, Performance, Supportability, and Constraints)  described in @bruegge:2004:ObjectorientedSoftwareEngineering:
 
 - *NFR1. Concurrent Test Execution*: <NFR1>
-The system must be able to handle high-performance requirements, such as the ability to simulate complex workflows and the ability to measure response times, throughput, and error rates under varying levels of load.
+The system must handle high-performance requirements, such as the ability to simulate complex workflows and measure response times, throughput, and error rates under varying levels of load.
 
 - *NFR2. Reproducible Test Results*: <NFR2>
-The system must be able to handle high reliability requirements, such as the ability to reproduce test results and the ability to detect errors or failures in core functionality.
+The system must handle high reliability requirements, such as the ability to reproduce test results and detect errors or failures in core functionality.
 
 - *NFR3. User Behavior Profiles*: <NFR3>
-The system must be able to handle high usability requirements, such as the ability to configure user behavior profiles and test parameters, and to enable repeatable execution of scenarios for regression testing and validation of system stability over time.
+The system must handle high usability requirements, such as the ability to configure user behavior profiles and test parameters, and to enable repeatable execution of scenarios for regression testing and validation of system stability over time.
 
 - *NFR4. Scalable Test Execution*: <NFR4>
 The system must be able to handle scalability requirements, such as the ability to simulate multiple concurrent users and the ability to measure response times, throughput, and error rates under varying levels of load.
@@ -77,5 +77,5 @@ The system must be able to handle scalability requirements, such as the ability 
 The system must be able to handle portability requirements, such as the ability to run on different platforms and the ability to integrate with different systems.
 
 - *NFR6. Data Security*: <NFR6>
-The system should ensure that simulated interactions do not compromise user data or access controls in the IDE.
+The system should ensure that simulated interactions do not compromise IDE user data or access controls.
 
