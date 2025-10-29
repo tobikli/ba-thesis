@@ -25,6 +25,11 @@ The reliability and scalability of browser-based IDEs are critical to modern pro
   caption: [Example View for a student during a programming exam using Theia Cloud],
 ) <fig1>
 
+
+Ensuring such reliability requires more than just stable infrastructure; it depends on a deep understanding of how students and instructors interact with the IDE in real educational contexts. Examining their respective needs and expectations makes it clear why system robustness and scalability are not merely technical goals but essential prerequisites for effective teaching and learning.
+The following will examine how different target groups may benefit from a stable infrastructure and a reliable testing system.
+
+
 === Instructors And Students
 For instructors and educational institutions, a robust IDE infrastructure enables the creation of richer and more complex exercises without being limited by technical uncertainties. When instructors can assume a stable baseline for the environment, they can design tasks that emphasize problem-solving, algorithmic thinking, and creativity rather than troubleshooting setup issues. This shift allows more focus on pedagogy while reducing the support burden during courses and exams.
 
@@ -32,7 +37,7 @@ For instructors and educational institutions, a robust IDE infrastructure enable
 From an operational perspective, universities must simultaneously serve large cohorts of students, often under strict time constraints. Without systematic scalability testing, institutions risk performance bottlenecks and failures that can jeopardize entire examinations. Therefore, automated verification and realistic load simulations are essential to quality assurance in digital learning environments. 
 
 === Scientific Perspective
-From a scientific standpoint, testing interactive web applications such as cloud-based IDEs remains a challenging and underexplored problem. End-to-end testing approaches must account for asynchronous user interactions, real-time feedback, and integration with external services. Furthermore, scalability testing in cloud-native education infrastructure introduces unique challenges: hundreds of parallel user sessions, varying network conditions, and the need to reproduce realistic student workflows. Existing research on Software-as-a-Service (SaaS) testing and performance engineering @tsai:2011:TestingScalabilitySaaS provides valuable foundations, but the educational use case introduces distinct requirements regarding fairness, reliability, and usability.
+From a scientific standpoint, testing interactive web applications such as cloud-based IDEs remains a challenging and underexplored problem @marin:2011:TestingFutureWeb. End-to-end testing approaches must account for asynchronous user interactions, real-time feedback, and integration with external services. Furthermore, scalability testing in cloud-native education infrastructure introduces unique challenges: hundreds of parallel user sessions, varying network conditions, and the need to reproduce realistic student workflows. Existing research on Software-as-a-Service (SaaS) testing and performance engineering @tsai:2011:TestingScalabilitySaaS provides valuable foundations, but the educational use case introduces distinct requirements regarding fairness, reliability, and usability.
 
 By addressing both functional correctness and load behavior in a unified framework, this thesis contributes to ongoing research in end-to-end testing, performance engineering, and educational technology. The results enhance Theia Cloud's reliability within Artemis and provide transferable insights for designing and testing other cloud-based educational systems. 
 
@@ -46,7 +51,7 @@ The basic structure of the test suite, as seen in @fig2, covers essential functi
 
 #figure(
   image("/figures/activity_basic_workflow.drawio.svg", height: 45%),
-  caption: [Basic Activity Diagram of functional tests workflow],
+  caption: [Basic Activity Diagram of a functional test workflow],
 ) <fig2>
 
 
@@ -63,15 +68,21 @@ The scalable load testing framework should be able to generate randomized and pe
 
 == Outline
 This thesis is organized into seven chapters as follows: \
+
   *Chapter 1 Introduction*
- presents the research problem and introduces the existing system, its architecture, and the motivation for building an automated E2E and load testing framework. \
+presents the research problem and introduces the existing system, its architecture, and the motivation for building an automated E2E and load testing framework. \
+
   *Chapter 2 Related Work*
- reviews existing approaches and research in automated testing, performance evaluation, and educational IDEs. \
+reviews existing approaches and research in automated testing, performance evaluation, and educational IDEs. \
   *Chapter 3 Requirements Analysis*
- identifies and analyzes the functional and non-functional requirements for testing Theia Cloud. \
+
+identifies and analyzes the functional and non-functional requirements for testing Theia Cloud. \
   *Chapter 4 System Design*
- describes the architecture and implementation of the proposed testing framework, including E2E and load testing strategies. \
-  *Chapter 5 Case Study / Evaluation*
- demonstrates the framework through practical experiments and evaluates its effectiveness in addressing the research objectives. \
+
+describes the architecture and implementation of the proposed testing framework, including E2E and load testing strategies. \
+  *Chapter 5 Test Results*
+
+demonstrates the framework through practical experiments and evaluates its effectiveness in addressing the research objectives. \
   *Chapter 6 Summary*
- summarizes the findings, discusses limitations, and outlines directions for future research. \
+
+summarizes the findings, discusses limitations, and outlines directions for future research. \

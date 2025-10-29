@@ -1,4 +1,6 @@
-= Evaluation
+#pagebreak()
+
+= Test Results
 This thesis contributes to the field of automated testing and performance evaluation of browser-based IDEs by developing a testing framework for Theia Cloud and evaluating its performance under load. Developers and administrators of Theia Cloud and Artemis can especially benefit from this work, as it provides a way to test the functionality and performance of Theia Cloud and Artemis under load.
 
 As several research topics regarding the optimization of the performance of Theia Cloud and Artemis are still ongoing, this thesis does not provide a comprehensive evaluation of the performance of Theia Cloud and Artemis. Instead, it provides a framework for evaluating the performance of Theia Cloud and Artemis under load.

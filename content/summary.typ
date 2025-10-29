@@ -1,6 +1,8 @@
 #import "/figures/tables.typ": *
 #import "/utils/todo.typ": TODO
 
+#pagebreak()
+
 = Summary
 This chapter summarizes the development of the testing framework for Theia Cloud. We discuss the system's status and functionality as of this thesis's writing and provide an overview of the thesis's achievements and
 remaining challenges. Finally, we discuss potential future work to enhance
@@ -17,8 +19,6 @@ This section provides an overview of the status of the functional requirements a
 ● Implemented -
 ◐ Partially implemented
 ]
-
-#pagebreak()
 
 1. *Design of a Test Architecture for Cloud-Based IDEs*
 
@@ -40,7 +40,7 @@ This section provides an overview of the status of the functional requirements a
 == Conclusion
 This thesis sets out to develop and evaluate a systematic approach to testing the functionality and performance of an Online Integrated Development Environment used in an educational SaaS context. The main objective was to establish a reliable foundation for automated end-to-end and load testing that can realistically reproduce user behavior and reveal potential scalability limitations.
 
-The design and implementation of a dedicated testing framework demonstrated that comprehensive validation of an Online IDE is achievable even in the presence of restricted system access and distributed service architectures. The resulting test environment provides a practical means to assess correctness and performance under real-world conditions, bridging the gap between controlled testing and production-like scenarios.
+The design and implementation of a dedicated testing framework demonstrated that comprehensive validation of an Online IDE is achievable even with restricted system access and distributed service architectures. The resulting test environment provides a practical means to assess correctness and performance under real-world conditions, bridging the gap between controlled testing and production-like scenarios.
 
 The work further emphasized balancing automation and manual evaluation when operating within a managed infrastructure. By decoupling heavy load tests from continuous integration pipelines, the testing approach ensures both safety and flexibility for developers.
 
@@ -51,14 +51,28 @@ Overall, this work improves cloud-based IDE platforms' reliability, scalability,
 == Future Work
 This section discusses potential future work to enhance the system's functionality, especially the integration of the MCP testing framework into the Artemis E2E pipeline and the integration of the MCP testing framework into the Artemis E2E pipeline.
 
+While this thesis establishes a solid foundation for automated end-to-end and load testing of cloud-based IDEs, several directions remain for future research and development. Each proposed area represents an opportunity for a dedicated follow-up project or thesis to extend and refine the system's capabilities.
+
 === Automated Pipeline Execution
-Although integrating an automated pipeline execution was not feasible at the current stage, it is a promising future work to enhance the system's functionality. This integration allows for the automatic execution of the tests in the CI/CD pipeline, significantly improving the development process. Regarding execution platform and conditions, it would be interesting to evaluate the performance of the tests on different platforms and conditions, such as different browsers, operating systems, and network conditions.
+A significant next step is integrating the testing framework into a fully automated continuous integration and deployment (CI/CD) pipeline. Such integration would enable the execution of end-to-end and regression tests automatically upon new code submissions or deployments, thereby ensuring that functional and performance regressions are detected early in the development cycle.
+
+Future work could focus on designing a scalable and resource-aware pipeline architecture that allows automated test execution without interfering with production environments. This would involve dynamic environment provisioning (e.g., ephemeral test instances for Theia Cloud and Artemis) and result aggregation for trend analysis over multiple runs.
+A comparative evaluation across different execution platforms, such as various browsers, operating systems, and network conditions, could reveal platform-specific weaknesses and help optimize the testing setup for educational contexts. Such an effort would significantly increase confidence in each release and provide developers with actionable performance metrics directly integrated into their workflow.
 
 === Automated MCP Testing
-The integration of Model Context Protocol based testing is still experimental and not yet included in the automated test pipelines. The current MCP implementation requires connectivity to Anthropic's Claude #footnote("https://www.anthropic.com/") models and other specialized infrastructure components unavailable in the cloud-based testing environment. We encountered several failures, including wrong indentation when pasting code into the editor. Future work will focus on stabilizing the MCP testing components and integrating them into a dedicated pipeline once the necessary infrastructure becomes available.
+Integrating Model Context Protocol-based testing into the automated testing pipeline represents another promising direction. MCP introduces the ability to test user interfaces through autonomous agents driven by large language models, allowing the simulation of realistic and adaptive user behavior rather than strictly scripted interactions.
+
+Future research could aim to stabilize and generalize the MCP integration, addressing the current technical limitations, such as unreliable text input, code formatting inconsistencies, and dependency on external model providers (e.g., Anthropic Claude or OpenAI models). Once stabilized, this setup could be connected to a dedicated CI pipeline to automatically validate new IDE versions using LLM-driven agents.
+A subsequent thesis could evaluate how well LLMs can learn to interact with development environments, how consistent their behavior is across different prompts, and how effectively they can detect UI or workflow regressions without explicit scripting.
+
 
 === LLM Testing for Artemis
-We could use the LLM testing framework to test the Artemis platform itself by generating test cases for the Artemis platform and evaluating the performance of the platform under load. Therefore, we would significantly improve the development process, as it would allow for detecting performance bottlenecks and regressions in the Artemis platform itself and identifying potential security vulnerabilities.
+Beyond testing the IDE, we could extend the LLM-based testing framework to automatically test the Artemis learning platform. Let LLM agents generate and execute test cases for Artemis features such as exercise creation, submission handling, or grading workflows. This would represent a significant leap toward autonomous system-level testing.
+
+Future work could focus on integrating LLM-based behavior generation with Artemis' REST API to automatically construct diverse, high-coverage test scenarios. In addition to correctness verification, these tests could include load and stress evaluations, providing valuable data on system performance under real-world conditions.
+Such a project could also explore the potential for AI-assisted security testing, where LLMs attempt to identify potential vulnerabilities by generating adversarial inputs or edge cases, an area with strong research potential in educational platforms.
 
 === Further Test Cases
-Although the current test suite covers a wide range of functionalities, there are still some functionalities that the test suite does not cover. As online IDEs are complex systems that are constantly evolving, many functionalities are still not covered by the test suite. Future work may focus on covering more functionalities and improving the test suite.
+Although the current test suite covers a broad set of IDE functionalities, Online IDEs are continuously evolving systems with growing feature sets. Future work should therefore focus on systematically extending test coverage, especially for features that involve collaborative editing, real-time synchronization, or advanced debugging capabilities.
+
+A potential follow-up thesis could focus on creating a comprehensive test generation framework, leveraging LLMs or model-based testing techniques to derive test cases directly from use-case descriptions or system models. This would improve coverage and reduce the maintenance effort for large test suites. Additionally, comparative studies could be conducted to assess the effectiveness and stability of these automatically generated tests against traditional scripted tests, contributing valuable insights to software testing automation.

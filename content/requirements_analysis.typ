@@ -1,6 +1,8 @@
 #import "/utils/todo.typ": TODO
 #import "/figures/tables.typ": *
 
+#pagebreak()
+
 = Requirements
 This chapter outlines the requirements for the automated testing framework for Theia Cloud, based on the requirements analysis by Bruegge et al. @bruegge:2004:ObjectorientedSoftwareEngineering.
 It begins with an overview of the envisioned solution in @overview, followed by a presentation of several dynamic models in @dynamicmodels. We will continue with a structured presentation of the proposed system in @proposedsystem, which derives the functional and non-functional requirements from the system models in @functionalrequirements and @nonfunctionalrequirements. These requirements are the foundation for the subsequent design, implementation, and evaluation phases.
@@ -8,18 +10,20 @@ It begins with an overview of the envisioned solution in @overview, followed by 
 == Overview <overview>
 The primary objective of this thesis is to define, design, and evaluate a system capable of performing automated E2E testing and load testing for an Online Integrated Development Environment. The system aims to provide a reliable and repeatable method for assessing both the functional correctness and performance of the IDE under realistic conditions. Simulating user interactions at scale enables the identification of potential bottlenecks, stability issues, and areas for optimization before they impact real users. Furthermore, the system is intended to support continuous evaluation, allowing developers and administrators to maintain high-quality, scalable IDE deployments over time. Overall, the goal is to create a comprehensive testing framework that enhances confidence in the IDE's reliability, responsiveness, and suitability for large-scale educational use.
 
-=== Dynamic Models <dynamicmodels>
+== Dynamic Models <dynamicmodels>
 To better illustrate the requirements and interactions of the proposed system, we present two dynamic models.
 
-==== Activity Diagram
+=== Activity Diagram
 The activity diagram shown in @fig3 showcases a typical student workflow for an IDE. It starts with the student opening the IDE, potentially changing preferences in the UI and the behavior of the IDE, installing project-specific extensions, cloning a repository, editing the code, running the code, and committing and pushing the changes to the remote repository.
 
 #figure(
   image("/figures/activity_ide_use.drawio.svg", height: 70%),
-  caption: [Activity Diagram showcasing typical student workflow for the IDEs],
+  caption: [Activity Diagram showcasing a typical student workflow for the IDEs],
 ) <fig3>
 
-==== Use Case Model
+#pagebreak()
+
+=== Use Case Model
 Focusing on integrating the IDE with Artemis, we can derive the following use case models, as shown in @fig4.
 
 #figure(
@@ -37,10 +41,12 @@ Together, these use cases highlight the dual perspective of students and instruc
 We propose a new system because there is currently no system that can perform automated E2E testing and load testing for an Online Integrated Development Environment IDE. 
 
 === Functional Requirements <functionalrequirements>
-By assessing the previous dynamic models, we can derive the following functional and non-functional requirements according to the requirements analysis by Bruegge et al. @bruegge:2004:ObjectorientedSoftwareEngineering:
+By assessing the previous dynamic models, we can derive the following functional requirements and quality attributes, according to the requirements analysis by Bruegge et al. @bruegge:2004:ObjectorientedSoftwareEngineering:
 
 - *FR1. Simulate User Interactions*:
 The system must simulate realistic user interactions within the IDE, including opening, editing, and saving files, using the terminal to compile and run programs, managing projects or exercises, and performing version control operations such as committing, pushing, and pulling changes. It must support the execution of sequences of actions that accurately mimic real student workflows.
+
+#pagebreak()
 
 - *FR2. Automated End-to-End Testing*:
 The system must provide automated E2E testing capabilities to verify the correctness of IDE features. It should allow test scenarios to be defined, reused, and parameterized to cover different workflows and use cases, and it must detect errors or failures in core functionality.
@@ -57,25 +63,34 @@ The system must allow test scenarios to be defined, configured, and managed effi
 - *FR6. Integration with Intelligent Agents*:
 The system should support integration of intelligent agents based on the Model Context Protocol. These agents can simulate adaptive and realistic student behavior, and their behavior should be customizable to represent different skill levels or interaction patterns.
 
+#pagebreak()
 
-=== Nonfunctional Requirements <nonfunctionalrequirements>
+=== Quality Attributes & Constraints <nonfunctionalrequirements>
 This section lists the requirements not directly related to the system's functionality. We categorize them using the FURPS+ model (Functionality, Usability, Reliability, Performance, Supportability, and Constraints)  described in @bruegge:2004:ObjectorientedSoftwareEngineering:
 
-- *NFR1. Concurrent Test Execution*: <NFR1>
+- *NFR1. Concurrent Test Execution (Performance)*: <NFR1>
 The system must handle high-performance requirements, such as the ability to simulate complex workflows and measure response times, throughput, and error rates under varying levels of load.
 
-- *NFR2. Reproducible Test Results*: <NFR2>
+- *NFR2. Reproducible Test Results (Reliability)*: <NFR2>
 The system must handle high reliability requirements, such as the ability to reproduce test results and detect errors or failures in core functionality.
 
-- *NFR3. User Behavior Profiles*: <NFR3>
-The system must handle high usability requirements, such as the ability to configure user behavior profiles and test parameters, and to enable repeatable execution of scenarios for regression testing and validation of system stability over time.
+- *NFR3. User Behavior Profiles (Usability)*: <NFR3>
+The system must handle high usability requirements, such as the ability to configure user behavior profiles and test parameters, and to enable repeatable execution of scenarios for regression testing and validation of system stability over time, as seen in @figui.
 
-- *NFR4. Scalable Test Execution*: <NFR4>
+#figure(
+  image("/figures/test-ui.png", width: 80%),
+  caption: [Playwright UI for repeatable test execution and evaluation],
+) <figui>
+
+#pagebreak()
+
+- *NFR4. Scalable Test Execution (Performance / Reliability)*: <NFR4>
 The system must be able to handle scalability requirements, such as the ability to simulate multiple concurrent users and the ability to measure response times, throughput, and error rates under varying levels of load.
 
-- *NFR5. Cross-Platform Compatibility*: <NFR5>
+- *NFR5. Cross-Platform Compatibility (Supportability)*: <NFR5>
 The system must be able to handle portability requirements, such as the ability to run on different platforms and the ability to integrate with different systems.
 
-- *NFR6. Data Security*: <NFR6>
+- *NFR6. Data Security (Constraint)*: <NFR6>
 The system should ensure that simulated interactions do not compromise IDE user data or access controls.
+
 
