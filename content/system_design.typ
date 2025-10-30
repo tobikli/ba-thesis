@@ -121,7 +121,7 @@ The most common way to set up a Model Context Protocol (MCP) environment is to r
 
 As seen in @mcplocal, the IDE acts as the MCP client and coordinates the Playwright MCP server and the LLM agent. Depending on the IDE's setup, the client connects to a remotely hosted LLM, enabling bidirectional communication between the two components. The client uses the MCP interface to give the server controlled access to the LLM's capabilities.
 
-Whenever the language model needs to interact with the MCP server, it sends a message through the client, which forwards it accordingly. The server can execute Playwright commands based on the received instructions, such as navigating to a page, clicking on elements, or performing input actions. Meanwhile, the IDE forwards user inputs to the client, which converts them into context for the LLM, allowing it to generate appropriate prompts for testing and interacting with the system.
+Whenever the language model needs to interact with the MCP server, it sends a message through the client, which forwards it accordingly using the Chrome DevTools Protocol (CDP) #footnote("https://chromedevtools.github.io/devtools-protocol/"). The server can execute Playwright commands based on the received instructions, such as navigating to a page, clicking on elements, or performing input actions. Meanwhile, the IDE forwards user inputs to the client, which converts them into context for the LLM, allowing it to generate appropriate prompts for testing and interacting with the system.
 
 #figure(
   image("/figures/mcp_local.drawio.svg", width: 100%),
