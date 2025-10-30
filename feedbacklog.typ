@@ -14,26 +14,26 @@
 )
 
 #feedback(
-  feedback: "The objectives slide of the presentation should formulated in the verbal action form rather than just listing the names and descriptions of the objectives.",
-  response: "To help the audience to follow the presentation easier, the objectives were rewritten in the verbal action form to make it more clear and concise and to make it more consistent with the status slide."
+  feedback: "The objectives slide of the presentation should be formulated in verbal action form rather than simply listing the names and descriptions of the objectives.",
+  response: "To help the audience follow the presentation more easily, the objectives were rewritten in verbal action form to make them clearer, more concise, and consistent with the status slide."
 )
 
 #feedback(
-  feedback: "The demo including the dynamic flow using the LLMs. Is there an API on how to do that, and what exactly did I use.",
-  response: "The exact implementation of the dynamic flow were out of scope of the actual presentation, but are available as backup slides. The LLM communicates via the MCP framework, allowing the LLM to communicate with local tools."
+feedback: "The demo shows the dynamic flow using large language models (LLMs). Is there an available API for this interaction, and which components or tools were used in the implementation?",
+response: "The exact implementation of the dynamic flow was out of scope for the actual presentation but was included in the backup slides. The LLM communicates via the Model Context Protocol (MCP) framework, allowing it to interact with local tools."
 )
 
 #feedback(
-  feedback: "Does Playwright support this interaction out of the box and how does the LLM interact with the interface.",
-  response: "Microsoft provides a MCP server for its Playwright framework that already includes most of the functionality for LLMs to interact with webpages."
+feedback: "Does Playwright support this type of interaction out of the box, and how does the LLM communicate with the interface?",
+response: "Microsoft provides an MCP server for its Playwright framework that already includes most of the functionality needed for LLMs to interact with web pages."
 )
 
 #feedback(
-  feedback: "The limitation of the deployment of Artemis and Theia in a pipeline should be mentioned.",
-  response: "A corresponding chapter in the thesis was  added to discuss the limitations of the deployment of Artemis and Theia in a pipeline."
+feedback: "The limitations regarding the deployment of Artemis and Theia within a pipeline should be mentioned.",
+response: "A corresponding chapter in the thesis was added to discuss the limitations of deploying Artemis and Theia within a pipeline environment."
 )
 
 #feedback(
-  feedback: "The status slide is not consistent with the objectives slide regarding the goals of the project.",
-  response: "Together with the objectives slide, the status slide was updated to be more consistent with the goals of the project."
+feedback: "The status slide should be consistent with the objectives slide in terms of the project’s goals.",
+response: "Together with the objectives slide, the status slide was updated to ensure alignment with the project’s goals."
 )
