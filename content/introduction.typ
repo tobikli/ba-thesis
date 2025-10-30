@@ -82,7 +82,7 @@ identifies and analyzes the functional and non-functional requirements for testi
 describes the architecture and implementation of the proposed testing framework, including E2E and load testing strategies. \
   *Chapter 5 Test Results*
 
-demonstrates the framework through practical experiments and evaluates its effectiveness in addressing the research objectives. \
+discusses the results, challenges and limitations of the testing suite. \
   *Chapter 6 Summary*
 
-summarizes the findings, discusses limitations, and outlines directions for future research. \
+summarizes the findings and outlines directions for future research. \

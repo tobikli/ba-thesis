@@ -13,6 +13,8 @@ The primary objective of this thesis is to define, design, and evaluate a system
 == Dynamic Models <dynamicmodels>
 To better illustrate the requirements and interactions of the proposed system, we present two dynamic models.
 
+#pagebreak()
+
 === Activity Diagram
 The activity diagram shown in @fig3 showcases a typical student workflow for an IDE. It starts with the student opening the IDE, potentially changing preferences in the UI and the behavior of the IDE, installing project-specific extensions, cloning a repository, editing the code, running the code, and committing and pushing the changes to the remote repository.
 
@@ -46,8 +48,6 @@ By assessing the previous dynamic models, we can derive the following functional
 - *FR1. Simulate User Interactions*:
 The system must simulate realistic user interactions within the IDE, including opening, editing, and saving files, using the terminal to compile and run programs, managing projects or exercises, and performing version control operations such as committing, pushing, and pulling changes. It must support the execution of sequences of actions that accurately mimic real student workflows.
 
-#pagebreak()
-
 - *FR2. Automated End-to-End Testing*:
 The system must provide automated E2E testing capabilities to verify the correctness of IDE features. It should allow test scenarios to be defined, reused, and parameterized to cover different workflows and use cases, and it must detect errors or failures in core functionality.
 
@@ -78,7 +78,7 @@ The system must handle high reliability requirements, such as the ability to rep
 The system must handle high usability requirements, such as the ability to configure user behavior profiles and test parameters, and to enable repeatable execution of scenarios for regression testing and validation of system stability over time, as seen in @figui.
 
 #figure(
-  image("/figures/test-ui.png", width: 80%),
+  image("/figures/test-ui.png", width: 95%),
   caption: [Playwright UI for repeatable test execution and evaluation],
 ) <figui>
 
