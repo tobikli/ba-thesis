@@ -1,5 +1,5 @@
 #import "/utils/todo.typ": TODO
-
+#pagebreak()
 = Related Work
 
 E2E testing has become an integral part of modern software development practices, enabling developers to validate entire workflows' functionality from the end user's perspective @paul:2001:EndtoendIntegrationTesting. In recent years, a variety of frameworks have emerged for E2E testing, with Playwright #footnote("https://playwright.dev/")<pwr>, developed by Microsoft, standing out due to its cross-browser support, reliable automation capabilities, and ease of integration into CI/CD pipelines.
